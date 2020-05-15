@@ -32,6 +32,8 @@ namespace MRIC_Peer_Review
 
         private void Initialisation()
         {
+            lblReviewerDiplay.Text = "Click on a row in the table to insert a comment.";
+
             // Enable DataGrid
             dGridAll.Enabled = true;
             dGridAwaiting.Enabled = true;
@@ -40,9 +42,8 @@ namespace MRIC_Peer_Review
             dGridClosed.Enabled = true;
 
             //Hide label and panel
-            pnlComment.Visible = false;
+            txtBoxReview.Visible = false;
             lblRefresh.Visible = false;
-            lblRateReview.Visible = false;
             btnSubmitReview.Visible = false;
             btnGoToLink.Visible = false;
 
@@ -145,14 +146,14 @@ namespace MRIC_Peer_Review
 
                     tabReviews.Cursor = Cursors.No;
 
-                    pnlComment.Visible = true;
+                    txtBoxReview.Visible = true;
                     lblRefresh.Visible = true;
                     lblReviewerDiplay.ForeColor = Color.SteelBlue;
-                    lblReviewerDiplay.Text = "Selected Review:\r\r"+ dGridAll.Rows[e.RowIndex].Cells["Title"].FormattedValue.ToString();
+                    lblReviewerDiplay.Text = "Selected Review:\r"+ dGridAll.Rows[e.RowIndex].Cells["Title"].FormattedValue.ToString();
                 }
                 else
                 {
-                    pnlComment.Visible = false;
+                    txtBoxReview.Visible = false;
                     lblRefresh.Visible = false;
                     lblReviewerDiplay.ForeColor = Color.Red;
                     lblReviewerDiplay.Text = "Review is already "+ dGridAll.Rows[e.RowIndex].Cells["Status"].FormattedValue.ToString();
@@ -160,7 +161,7 @@ namespace MRIC_Peer_Review
             }
             else
             {
-                pnlComment.Visible = false;
+                txtBoxReview.Visible = false;
                 lblRefresh.Visible = false;
             }
         }
@@ -186,14 +187,14 @@ namespace MRIC_Peer_Review
 
                     tabReviews.Cursor = Cursors.No;
 
-                    pnlComment.Visible = true;
+                    txtBoxReview.Visible = true;
                     lblRefresh.Visible = true;
                     lblReviewerDiplay.ForeColor = Color.SteelBlue;
-                    lblReviewerDiplay.Text = "Selected Review:\r\r" + dGridAwaiting.Rows[e.RowIndex].Cells["Title"].FormattedValue.ToString();
+                    lblReviewerDiplay.Text = "Selected Review:\r" + dGridAwaiting.Rows[e.RowIndex].Cells["Title"].FormattedValue.ToString();
                 }
                 else
                 {
-                    pnlComment.Visible = false;
+                    txtBoxReview.Visible = false;
                     lblRefresh.Visible = false;
                     lblReviewerDiplay.ForeColor = Color.Red;
                     lblReviewerDiplay.Text = "Review is already " + dGridAwaiting.Rows[e.RowIndex].Cells["Status"].FormattedValue.ToString();
@@ -201,7 +202,7 @@ namespace MRIC_Peer_Review
             }
             else
             {
-                pnlComment.Visible = false;
+                txtBoxReview.Visible = false;
                 lblRefresh.Visible = false;
             }
         }
@@ -225,16 +226,16 @@ namespace MRIC_Peer_Review
                     dGridLocked.Enabled = false;
                     dGridClosed.Enabled = false;
 
-                    tabReviews.Cursor = Cursors.No; 
-                    
-                    pnlComment.Visible = true;
+                    tabReviews.Cursor = Cursors.No;
+
+                    txtBoxReview.Visible = true;
                     lblRefresh.Visible = true;
                     lblReviewerDiplay.ForeColor = Color.SteelBlue;
-                    lblReviewerDiplay.Text = "Selected Review:\r\r" + dGridOpen.Rows[e.RowIndex].Cells["Title"].FormattedValue.ToString();
+                    lblReviewerDiplay.Text = "Selected Review:\r" + dGridOpen.Rows[e.RowIndex].Cells["Title"].FormattedValue.ToString();
                 }
                 else
                 {
-                    pnlComment.Visible = false;
+                    txtBoxReview.Visible = false;
                     lblRefresh.Visible = false;
                     lblReviewerDiplay.ForeColor = Color.Red;
                     lblReviewerDiplay.Text = "Review is already " + dGridOpen.Rows[e.RowIndex].Cells["Status"].FormattedValue.ToString();
@@ -242,7 +243,7 @@ namespace MRIC_Peer_Review
             }
             else
             {
-                pnlComment.Visible = false;
+                txtBoxReview.Visible = false;
                 lblRefresh.Visible = false;
             }
         }
@@ -268,16 +269,16 @@ namespace MRIC_Peer_Review
                     dGridLocked.Enabled = false;
                     dGridClosed.Enabled = false;
 
-                    tabReviews.Cursor = Cursors.No; 
+                    tabReviews.Cursor = Cursors.No;
 
-                    pnlComment.Visible = true;
+                    txtBoxReview.Visible = true;
                     lblRefresh.Visible = true;
                     lblReviewerDiplay.ForeColor = Color.SteelBlue;
-                    lblReviewerDiplay.Text = "Selected Review:\r\r" + dGridLocked.Rows[e.RowIndex].Cells["Title"].FormattedValue.ToString();
+                    lblReviewerDiplay.Text = "Selected Review:\r" + dGridLocked.Rows[e.RowIndex].Cells["Title"].FormattedValue.ToString();
                 }
                 else
                 {
-                    pnlComment.Visible = false;
+                    txtBoxReview.Visible = false;
                     lblRefresh.Visible = false;
                     lblReviewerDiplay.ForeColor = Color.Red;
                     lblReviewerDiplay.Text = "Review is already " + dGridLocked.Rows[e.RowIndex].Cells["Status"].FormattedValue.ToString();
@@ -285,7 +286,7 @@ namespace MRIC_Peer_Review
             }
             else
             {
-                pnlComment.Visible = false;
+                txtBoxReview.Visible = false;
                 lblRefresh.Visible = false;
             }
         }
@@ -309,16 +310,16 @@ namespace MRIC_Peer_Review
                     dGridLocked.Enabled = false;
                     dGridClosed.Enabled = false;
 
-                    tabReviews.Cursor = Cursors.No; 
-                    
-                    pnlComment.Visible = true;
+                    tabReviews.Cursor = Cursors.No;
+
+                    txtBoxReview.Visible = true;
                     lblRefresh.Visible = true;
                     lblReviewerDiplay.ForeColor = Color.SteelBlue;
-                    lblReviewerDiplay.Text = "Selected Review:\r\r" + dGridClosed.Rows[e.RowIndex].Cells["Title"].FormattedValue.ToString();
+                    lblReviewerDiplay.Text = "Selected Review:\r" + dGridClosed.Rows[e.RowIndex].Cells["Title"].FormattedValue.ToString();
                 }
                 else
                 {
-                    pnlComment.Visible = false;
+                    txtBoxReview.Visible = false;
                     lblRefresh.Visible = false;
                     lblReviewerDiplay.ForeColor = Color.Red;
                     lblReviewerDiplay.Text = "Review is already " + dGridClosed.Rows[e.RowIndex].Cells["Status"].FormattedValue.ToString();
@@ -326,7 +327,7 @@ namespace MRIC_Peer_Review
             }
             else
             {
-                pnlComment.Visible = false;
+                txtBoxReview.Visible = false;
                 lblRefresh.Visible = false;
             }
         }
@@ -374,8 +375,7 @@ namespace MRIC_Peer_Review
 
         private void txtBoxReview_TextChanged(object sender, EventArgs e)
         {
-            numRate.Visible = true;
-            lblRateReview.Visible = true;
+            btnSubmitReview.Visible = true;
         }
 
         private void btnSubmitReview_Click(object sender, EventArgs e)
@@ -389,8 +389,7 @@ namespace MRIC_Peer_Review
                     MessageBoxIcon.Information
                     );
             string comment = txtBoxReview.Text;
-            int rate = (int)numRate.Value;
-            Commenting commenting = new Commenting(reviewId, comment, rate);
+            Commenting commenting = new Commenting(reviewId, comment);
             commenting.SaveComment();
             Initialisation();
         }

@@ -34,8 +34,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReviewTasks));
-            this.lblRateReview = new System.Windows.Forms.Label();
-            this.numRate = new System.Windows.Forms.NumericUpDown();
             this.lblReviewerDiplay = new System.Windows.Forms.Label();
             this.btnSubmitReview = new System.Windows.Forms.Button();
             this.txtBoxReview = new System.Windows.Forms.RichTextBox();
@@ -53,9 +51,7 @@
             this.lblRefresh = new System.Windows.Forms.Label();
             this.tabReviews = new System.Windows.Forms.TabControl();
             this.tabClosed = new System.Windows.Forms.TabPage();
-            this.pnlComment = new System.Windows.Forms.Panel();
             this.btnGoToLink = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.numRate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGridClosed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGridLocked)).BeginInit();
             this.tabLocked.SuspendLayout();
@@ -67,53 +63,19 @@
             this.tabAllReviews.SuspendLayout();
             this.tabReviews.SuspendLayout();
             this.tabClosed.SuspendLayout();
-            this.pnlComment.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // lblRateReview
-            // 
-            this.lblRateReview.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblRateReview.AutoSize = true;
-            this.lblRateReview.Font = new System.Drawing.Font("Arial", 9.5F, System.Drawing.FontStyle.Bold);
-            this.lblRateReview.ForeColor = System.Drawing.Color.SteelBlue;
-            this.lblRateReview.Location = new System.Drawing.Point(2, 130);
-            this.lblRateReview.Name = "lblRateReview";
-            this.lblRateReview.Size = new System.Drawing.Size(53, 16);
-            this.lblRateReview.TabIndex = 19;
-            this.lblRateReview.Text = "Rating:";
-            this.lblRateReview.Visible = false;
-            // 
-            // numRate
-            // 
-            this.numRate.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.numRate.BackColor = System.Drawing.Color.White;
-            this.numRate.Font = new System.Drawing.Font("Arial", 9.5F, System.Drawing.FontStyle.Bold);
-            this.numRate.ForeColor = System.Drawing.Color.SteelBlue;
-            this.numRate.Location = new System.Drawing.Point(52, 127);
-            this.numRate.Maximum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.numRate.MinimumSize = new System.Drawing.Size(10, 0);
-            this.numRate.Name = "numRate";
-            this.numRate.ReadOnly = true;
-            this.numRate.Size = new System.Drawing.Size(37, 22);
-            this.numRate.TabIndex = 18;
-            this.numRate.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.numRate.Visible = false;
-            this.numRate.ValueChanged += new System.EventHandler(this.numRate_ValueChanged);
             // 
             // lblReviewerDiplay
             // 
             this.lblReviewerDiplay.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lblReviewerDiplay.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.lblReviewerDiplay.ForeColor = System.Drawing.Color.SteelBlue;
-            this.lblReviewerDiplay.Location = new System.Drawing.Point(19, 339);
+            this.lblReviewerDiplay.Location = new System.Drawing.Point(19, 331);
             this.lblReviewerDiplay.Name = "lblReviewerDiplay";
-            this.lblReviewerDiplay.Size = new System.Drawing.Size(296, 150);
+            this.lblReviewerDiplay.Size = new System.Drawing.Size(883, 48);
             this.lblReviewerDiplay.TabIndex = 20;
-            this.lblReviewerDiplay.Text = "Click on a row to insert a comment. ";
+            this.lblReviewerDiplay.Text = "Click on a row i the table to insert a comment.";
+            this.lblReviewerDiplay.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // btnSubmitReview
             // 
@@ -121,10 +83,10 @@
             this.btnSubmitReview.BackColor = System.Drawing.Color.SteelBlue;
             this.btnSubmitReview.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmitReview.ForeColor = System.Drawing.Color.White;
-            this.btnSubmitReview.Location = new System.Drawing.Point(774, 495);
+            this.btnSubmitReview.Location = new System.Drawing.Point(764, 495);
             this.btnSubmitReview.Name = "btnSubmitReview";
             this.btnSubmitReview.Size = new System.Drawing.Size(123, 40);
-            this.btnSubmitReview.TabIndex = 17;
+            this.btnSubmitReview.TabIndex = 6;
             this.btnSubmitReview.Text = "Submit";
             this.btnSubmitReview.UseVisualStyleBackColor = false;
             this.btnSubmitReview.Visible = false;
@@ -134,10 +96,10 @@
             // 
             this.txtBoxReview.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtBoxReview.BackColor = System.Drawing.Color.White;
-            this.txtBoxReview.Location = new System.Drawing.Point(3, 2);
+            this.txtBoxReview.Location = new System.Drawing.Point(181, 382);
             this.txtBoxReview.Name = "txtBoxReview";
-            this.txtBoxReview.Size = new System.Drawing.Size(544, 123);
-            this.txtBoxReview.TabIndex = 5;
+            this.txtBoxReview.Size = new System.Drawing.Size(558, 88);
+            this.txtBoxReview.TabIndex = 4;
             this.txtBoxReview.Text = "";
             this.txtBoxReview.TextChanged += new System.EventHandler(this.txtBoxReview_TextChanged);
             // 
@@ -148,10 +110,10 @@
             this.btnRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRefresh.Font = new System.Drawing.Font("Arial", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefresh.ForeColor = System.Drawing.Color.Black;
-            this.btnRefresh.Location = new System.Drawing.Point(798, 309);
+            this.btnRefresh.Location = new System.Drawing.Point(799, 309);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(71, 29);
-            this.btnRefresh.TabIndex = 22;
+            this.btnRefresh.TabIndex = 2;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = false;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
@@ -162,10 +124,10 @@
             this.btnClose.BackColor = System.Drawing.Color.SteelBlue;
             this.btnClose.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(17, 495);
+            this.btnClose.Location = new System.Drawing.Point(27, 495);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(123, 40);
-            this.btnClose.TabIndex = 21;
+            this.btnClose.TabIndex = 5;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -429,7 +391,7 @@
             this.lblRefresh.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lblRefresh.Font = new System.Drawing.Font("Arial", 8.5F, System.Drawing.FontStyle.Bold);
             this.lblRefresh.ForeColor = System.Drawing.Color.Red;
-            this.lblRefresh.Location = new System.Drawing.Point(18, 314);
+            this.lblRefresh.Location = new System.Drawing.Point(308, 316);
             this.lblRefresh.Name = "lblRefresh";
             this.lblRefresh.Size = new System.Drawing.Size(305, 17);
             this.lblRefresh.TabIndex = 24;
@@ -453,7 +415,7 @@
             this.tabReviews.SelectedIndex = 0;
             this.tabReviews.Size = new System.Drawing.Size(888, 300);
             this.tabReviews.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
-            this.tabReviews.TabIndex = 18;
+            this.tabReviews.TabIndex = 1;
             // 
             // tabClosed
             // 
@@ -468,17 +430,6 @@
             this.tabClosed.Text = "Closed";
             this.tabClosed.UseVisualStyleBackColor = true;
             // 
-            // pnlComment
-            // 
-            this.pnlComment.Controls.Add(this.numRate);
-            this.pnlComment.Controls.Add(this.txtBoxReview);
-            this.pnlComment.Controls.Add(this.lblRateReview);
-            this.pnlComment.Location = new System.Drawing.Point(319, 340);
-            this.pnlComment.Name = "pnlComment";
-            this.pnlComment.Size = new System.Drawing.Size(550, 151);
-            this.pnlComment.TabIndex = 23;
-            this.pnlComment.Visible = false;
-            // 
             // btnGoToLink
             // 
             this.btnGoToLink.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -489,7 +440,7 @@
             this.btnGoToLink.Location = new System.Drawing.Point(672, 309);
             this.btnGoToLink.Name = "btnGoToLink";
             this.btnGoToLink.Size = new System.Drawing.Size(127, 29);
-            this.btnGoToLink.TabIndex = 20;
+            this.btnGoToLink.TabIndex = 3;
             this.btnGoToLink.Text = "Go to Selected Link";
             this.btnGoToLink.UseVisualStyleBackColor = false;
             this.btnGoToLink.Click += new System.EventHandler(this.btnGoToLink_Click);
@@ -500,20 +451,19 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(914, 552);
+            this.Controls.Add(this.txtBoxReview);
             this.Controls.Add(this.lblRefresh);
-            this.Controls.Add(this.lblReviewerDiplay);
             this.Controls.Add(this.tabReviews);
             this.Controls.Add(this.btnGoToLink);
             this.Controls.Add(this.btnSubmitReview);
             this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.pnlComment);
             this.Controls.Add(this.btnRefresh);
+            this.Controls.Add(this.lblReviewerDiplay);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ReviewTasks";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Review Task";
             this.Load += new System.EventHandler(this.ReviewTasks_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.numRate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGridClosed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGridLocked)).EndInit();
             this.tabLocked.ResumeLayout(false);
@@ -525,16 +475,11 @@
             this.tabAllReviews.ResumeLayout(false);
             this.tabReviews.ResumeLayout(false);
             this.tabClosed.ResumeLayout(false);
-            this.pnlComment.ResumeLayout(false);
-            this.pnlComment.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblRateReview;
-        private System.Windows.Forms.NumericUpDown numRate;
         private System.Windows.Forms.Label lblReviewerDiplay;
         private System.Windows.Forms.Button btnSubmitReview;
         private System.Windows.Forms.RichTextBox txtBoxReview;
@@ -550,7 +495,6 @@
         private System.Windows.Forms.TabPage tabAllReviews;
         private System.Windows.Forms.TabControl tabReviews;
         private System.Windows.Forms.TabPage tabClosed;
-        private System.Windows.Forms.Panel pnlComment;
         private System.Windows.Forms.Button btnGoToLink;
         private System.Windows.Forms.Label lblRefresh;
         private System.Windows.Forms.DataGridView dGridAwaiting;

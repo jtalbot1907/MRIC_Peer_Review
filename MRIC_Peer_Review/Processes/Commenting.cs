@@ -12,18 +12,16 @@ namespace MRIC_Peer_Review.Processes
 
         private int reviewId;
         private string comments;
-        private int rate;
-        public Commenting(int reviewId, string comments, int rate)
+        public Commenting(int reviewId, string comments)
         {
             this.reviewId = reviewId;
             this.comments = comments;
-            this.rate = rate;
         }
 
         public void SaveComment()
         {
-            string sqlQuery = "INSERT INTO comments (reviewId, comments, rate) " +
-                "VALUES (" + reviewId + ", '" + comments + "'," + rate + ");";
+            string sqlQuery = "INSERT INTO comments (reviewId, comments) " +
+                "VALUES (" + reviewId + ", '" + comments + "');";
             Create(sqlQuery);
             sqlQuery = "Update Reviews SET status = 'open' where reviewId = " + reviewId + ";";
             Console.WriteLine(sqlQuery);
