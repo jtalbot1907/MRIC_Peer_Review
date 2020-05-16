@@ -86,6 +86,21 @@ namespace MRIC_Peer_Review
             thread.SetApartmentState(ApartmentState.STA);
             thread.Start();
         }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblWelcome_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     
 }

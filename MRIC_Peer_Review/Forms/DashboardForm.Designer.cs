@@ -59,7 +59,7 @@
             this.linkLogout.Cursor = System.Windows.Forms.Cursors.Hand;
             this.linkLogout.Font = new System.Drawing.Font("Arial", 11F);
             this.linkLogout.LinkColor = System.Drawing.Color.SteelBlue;
-            this.linkLogout.Location = new System.Drawing.Point(989, 12);
+            this.linkLogout.Location = new System.Drawing.Point(990, 9);
             this.linkLogout.Name = "linkLogout";
             this.linkLogout.Size = new System.Drawing.Size(52, 17);
             this.linkLogout.TabIndex = 1;
@@ -71,11 +71,11 @@
             // 
             this.btnPostRdoc.BackColor = System.Drawing.Color.SteelBlue;
             this.btnPostRdoc.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPostRdoc.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold);
+            this.btnPostRdoc.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.btnPostRdoc.ForeColor = System.Drawing.Color.White;
-            this.btnPostRdoc.Location = new System.Drawing.Point(183, 216);
+            this.btnPostRdoc.Location = new System.Drawing.Point(209, 350);
             this.btnPostRdoc.Name = "btnPostRdoc";
-            this.btnPostRdoc.Size = new System.Drawing.Size(175, 45);
+            this.btnPostRdoc.Size = new System.Drawing.Size(170, 40);
             this.btnPostRdoc.TabIndex = 2;
             this.btnPostRdoc.Text = "Post a Review";
             this.btnPostRdoc.UseVisualStyleBackColor = false;
@@ -85,11 +85,11 @@
             // 
             this.btnCommentReviews.BackColor = System.Drawing.Color.SteelBlue;
             this.btnCommentReviews.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCommentReviews.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold);
+            this.btnCommentReviews.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.btnCommentReviews.ForeColor = System.Drawing.Color.White;
-            this.btnCommentReviews.Location = new System.Drawing.Point(519, 216);
+            this.btnCommentReviews.Location = new System.Drawing.Point(519, 350);
             this.btnCommentReviews.Name = "btnCommentReviews";
-            this.btnCommentReviews.Size = new System.Drawing.Size(175, 45);
+            this.btnCommentReviews.Size = new System.Drawing.Size(170, 40);
             this.btnCommentReviews.TabIndex = 3;
             this.btnCommentReviews.Text = "Comment Reviews\r\n";
             this.btnCommentReviews.UseVisualStyleBackColor = false;
@@ -98,24 +98,24 @@
             // lblWelcome
             // 
             this.lblWelcome.AutoSize = true;
-            this.lblWelcome.Font = new System.Drawing.Font("Arial", 12F);
+            this.lblWelcome.Font = new System.Drawing.Font("Arial", 13F);
             this.lblWelcome.ForeColor = System.Drawing.Color.SteelBlue;
-            this.lblWelcome.Location = new System.Drawing.Point(65, 25);
+            this.lblWelcome.Location = new System.Drawing.Point(104, 32);
             this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(74, 18);
+            this.lblWelcome.Size = new System.Drawing.Size(84, 21);
             this.lblWelcome.TabIndex = 11;
             this.lblWelcome.Text = "Welcome";
+            this.lblWelcome.Click += new System.EventHandler(this.lblWelcome_Click);
             // 
             // btnUpdateProfile
             // 
-            this.btnUpdateProfile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnUpdateProfile.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnUpdateProfile.BackColor = System.Drawing.Color.MintCream;
             this.btnUpdateProfile.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUpdateProfile.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateProfile.ForeColor = System.Drawing.Color.Azure;
-            this.btnUpdateProfile.Location = new System.Drawing.Point(980, 49);
+            this.btnUpdateProfile.Font = new System.Drawing.Font("Arial", 8F);
+            this.btnUpdateProfile.ForeColor = System.Drawing.Color.SteelBlue;
+            this.btnUpdateProfile.Location = new System.Drawing.Point(141, 55);
             this.btnUpdateProfile.Name = "btnUpdateProfile";
-            this.btnUpdateProfile.Size = new System.Drawing.Size(61, 38);
+            this.btnUpdateProfile.Size = new System.Drawing.Size(82, 22);
             this.btnUpdateProfile.TabIndex = 12;
             this.btnUpdateProfile.Text = "Update Profile";
             this.btnUpdateProfile.UseVisualStyleBackColor = false;
@@ -125,11 +125,11 @@
             // 
             this.btnViewAllComments.BackColor = System.Drawing.Color.SteelBlue;
             this.btnViewAllComments.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnViewAllComments.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold);
+            this.btnViewAllComments.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.btnViewAllComments.ForeColor = System.Drawing.Color.White;
-            this.btnViewAllComments.Location = new System.Drawing.Point(855, 216);
+            this.btnViewAllComments.Location = new System.Drawing.Point(829, 350);
             this.btnViewAllComments.Name = "btnViewAllComments";
-            this.btnViewAllComments.Size = new System.Drawing.Size(175, 45);
+            this.btnViewAllComments.Size = new System.Drawing.Size(170, 40);
             this.btnViewAllComments.TabIndex = 16;
             this.btnViewAllComments.Text = "View all Comments";
             this.btnViewAllComments.UseVisualStyleBackColor = false;
@@ -138,9 +138,9 @@
             // pictureBox7
             // 
             this.pictureBox7.Image = global::MRIC_Peer_Review.Properties.Resources.office_material_1;
-            this.pictureBox7.Location = new System.Drawing.Point(13, 14);
+            this.pictureBox7.Location = new System.Drawing.Point(876, 269);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox7.Size = new System.Drawing.Size(80, 80);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 20;
             this.pictureBox7.TabStop = false;
@@ -149,40 +149,41 @@
             // 
             this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox6.Image = global::MRIC_Peer_Review.Properties.Resources.businessman_1;
-            this.pictureBox6.Location = new System.Drawing.Point(965, 9);
+            this.pictureBox6.Location = new System.Drawing.Point(970, 8);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox6.Size = new System.Drawing.Size(20, 20);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 19;
             this.pictureBox6.TabStop = false;
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(979, 92);
+            this.pictureBox5.Image = global::MRIC_Peer_Review.Properties.Resources.administrator;
+            this.pictureBox5.Location = new System.Drawing.Point(16, 16);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(70, 70);
+            this.pictureBox5.Size = new System.Drawing.Size(75, 75);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 18;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // pictureBox4
             // 
             this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox4.Image = global::MRIC_Peer_Review.Properties.Resources.text_lines;
-            this.pictureBox4.Location = new System.Drawing.Point(776, 185);
+            this.pictureBox4.Location = new System.Drawing.Point(566, 269);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(80, 80);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 17;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // pictureBox3
             // 
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(104, 185);
+            this.pictureBox3.Location = new System.Drawing.Point(256, 269);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(80, 80);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -194,9 +195,9 @@
             // 
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = global::MRIC_Peer_Review.Properties.Resources.school_material;
-            this.pictureBox2.Location = new System.Drawing.Point(440, 185);
+            this.pictureBox2.Location = new System.Drawing.Point(119, 55);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(80, 80);
+            this.pictureBox2.Size = new System.Drawing.Size(22, 22);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 14;
             this.pictureBox2.TabStop = false;
