@@ -80,6 +80,7 @@ namespace MRIC_Peer_Review
         {
             Application.Run(new CommentsForm());
         }
+
         private void btnViewAllComments_Click(object sender, EventArgs e)
         {
             thread = new Thread(OpenCommentsForm);
@@ -87,24 +88,16 @@ namespace MRIC_Peer_Review
             thread.Start();
         }
 
-        private void pictureBox5_Click(object sender, EventArgs e)
+        private void OpenRateReviewsForm()
         {
-
+            Application.Run(new RateReviewsForm());
         }
 
-        private void lblWelcome_Click(object sender, EventArgs e)
+        private void btnRateReviews_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox8_Click(object sender, EventArgs e)
-        {
-
+            thread = new Thread(OpenRateReviewsForm);
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start();
         }
     }
     

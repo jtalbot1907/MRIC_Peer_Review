@@ -59,6 +59,12 @@
     <Compile Include="Forms\DashboardForm.Designer.cs">
       <DependentUpon>DashboardForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\RateReviewsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RateReviewsForm.Designer.cs">
+      <DependentUpon>RateReviewsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\UpdateProfileForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +123,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\DashboardForm.resx">
       <DependentUpon>DashboardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RateReviewsForm.resx">
+      <DependentUpon>RateReviewsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\UpdateProfileForm.resx">
       <DependentUpon>UpdateProfileForm.cs</DependentUpon>
