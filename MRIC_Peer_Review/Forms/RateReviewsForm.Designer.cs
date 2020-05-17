@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dGridRateReview = new System.Windows.Forms.DataGridView();
             this.lblReviewerDiplay = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnSubmitReview = new System.Windows.Forms.Button();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dGridRateReview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
@@ -53,18 +54,18 @@
             this.dGridRateReview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGridRateReview.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.dGridRateReview.GridColor = System.Drawing.Color.White;
-            this.dGridRateReview.Location = new System.Drawing.Point(36, 79);
+            this.dGridRateReview.Location = new System.Drawing.Point(36, 43);
             this.dGridRateReview.Name = "dGridRateReview";
             this.dGridRateReview.ReadOnly = true;
             this.dGridRateReview.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dGridRateReview.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dGridRateReview.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dGridRateReview.RowHeadersVisible = false;
             this.dGridRateReview.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dGridRateReview.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -72,7 +73,7 @@
             this.dGridRateReview.ShowCellToolTips = false;
             this.dGridRateReview.ShowEditingIcon = false;
             this.dGridRateReview.ShowRowErrors = false;
-            this.dGridRateReview.Size = new System.Drawing.Size(723, 253);
+            this.dGridRateReview.Size = new System.Drawing.Size(723, 227);
             this.dGridRateReview.TabIndex = 2;
             // 
             // lblReviewerDiplay
@@ -98,6 +99,7 @@
             this.btnClose.TabIndex = 22;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnSubmitReview
             // 
@@ -112,13 +114,33 @@
             this.btnSubmitReview.Text = "Submit";
             this.btnSubmitReview.UseVisualStyleBackColor = false;
             this.btnSubmitReview.Visible = false;
+            this.btnSubmitReview.Click += new System.EventHandler(this.btnSubmitReview_Click);
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(505, 358);
+            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown1.ForeColor = System.Drawing.Color.SteelBlue;
+            this.numericUpDown1.Location = new System.Drawing.Point(679, 276);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDown1.Size = new System.Drawing.Size(80, 22);
             this.numericUpDown1.TabIndex = 24;
+            this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label1.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.SteelBlue;
+            this.label1.Location = new System.Drawing.Point(469, 278);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(204, 22);
+            this.label1.TabIndex = 25;
+            this.label1.Text = "Rate the Review out of ten";
             // 
             // RateReviewsForm
             // 
@@ -126,6 +148,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.btnSubmitReview);
             this.Controls.Add(this.btnClose);
@@ -146,5 +169,6 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnSubmitReview;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Label label1;
     }
 }

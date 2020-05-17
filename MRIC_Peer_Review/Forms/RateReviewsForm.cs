@@ -16,5 +16,15 @@ namespace MRIC_Peer_Review.Forms
         {
             InitializeComponent();
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSubmitReview_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
