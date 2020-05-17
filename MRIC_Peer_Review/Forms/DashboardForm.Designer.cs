@@ -77,7 +77,7 @@
             this.btnPostRdoc.Name = "btnPostRdoc";
             this.btnPostRdoc.Size = new System.Drawing.Size(170, 40);
             this.btnPostRdoc.TabIndex = 2;
-            this.btnPostRdoc.Text = "Post a Review";
+            this.btnPostRdoc.Text = "Post Reviews";
             this.btnPostRdoc.UseVisualStyleBackColor = false;
             this.btnPostRdoc.Click += new System.EventHandler(this.btnPostRDoc_Click);
             // 
@@ -100,7 +100,7 @@
             this.lblWelcome.AutoSize = true;
             this.lblWelcome.Font = new System.Drawing.Font("Arial", 13F);
             this.lblWelcome.ForeColor = System.Drawing.Color.SteelBlue;
-            this.lblWelcome.Location = new System.Drawing.Point(104, 32);
+            this.lblWelcome.Location = new System.Drawing.Point(87, 15);
             this.lblWelcome.Name = "lblWelcome";
             this.lblWelcome.Size = new System.Drawing.Size(84, 21);
             this.lblWelcome.TabIndex = 11;
@@ -109,11 +109,11 @@
             // 
             // btnUpdateProfile
             // 
-            this.btnUpdateProfile.BackColor = System.Drawing.Color.MintCream;
+            this.btnUpdateProfile.BackColor = System.Drawing.Color.White;
             this.btnUpdateProfile.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUpdateProfile.Font = new System.Drawing.Font("Arial", 8F);
-            this.btnUpdateProfile.ForeColor = System.Drawing.Color.SteelBlue;
-            this.btnUpdateProfile.Location = new System.Drawing.Point(141, 55);
+            this.btnUpdateProfile.ForeColor = System.Drawing.Color.LightSkyBlue;
+            this.btnUpdateProfile.Location = new System.Drawing.Point(118, 42);
             this.btnUpdateProfile.Name = "btnUpdateProfile";
             this.btnUpdateProfile.Size = new System.Drawing.Size(82, 22);
             this.btnUpdateProfile.TabIndex = 12;
@@ -137,13 +137,15 @@
             // 
             // pictureBox7
             // 
+            this.pictureBox7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox7.Image = global::MRIC_Peer_Review.Properties.Resources.office_material_1;
-            this.pictureBox7.Location = new System.Drawing.Point(876, 269);
+            this.pictureBox7.Location = new System.Drawing.Point(876, 267);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(80, 80);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 20;
             this.pictureBox7.TabStop = false;
+            this.pictureBox7.Click += new System.EventHandler(this.btnViewAllComments_Click);
             // 
             // pictureBox6
             // 
@@ -159,9 +161,9 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::MRIC_Peer_Review.Properties.Resources.administrator;
-            this.pictureBox5.Location = new System.Drawing.Point(16, 16);
+            this.pictureBox5.Location = new System.Drawing.Point(8, -3);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(75, 75);
+            this.pictureBox5.Size = new System.Drawing.Size(75, 80);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 18;
             this.pictureBox5.TabStop = false;
@@ -171,19 +173,19 @@
             // 
             this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox4.Image = global::MRIC_Peer_Review.Properties.Resources.text_lines;
-            this.pictureBox4.Location = new System.Drawing.Point(566, 269);
+            this.pictureBox4.Location = new System.Drawing.Point(566, 267);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(80, 80);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 17;
             this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            this.pictureBox4.Click += new System.EventHandler(this.btnCommentReviews_Click);
             // 
             // pictureBox3
             // 
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(256, 269);
+            this.pictureBox3.Location = new System.Drawing.Point(256, 267);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(80, 80);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -195,22 +197,21 @@
             // 
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = global::MRIC_Peer_Review.Properties.Resources.school_material;
-            this.pictureBox2.Location = new System.Drawing.Point(119, 55);
+            this.pictureBox2.Location = new System.Drawing.Point(94, 38);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(22, 22);
+            this.pictureBox2.Size = new System.Drawing.Size(25, 25);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 14;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.btnCommentReviews_Click);
+            this.pictureBox2.Click += new System.EventHandler(this.btnUpdateProfile_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox1.Image = global::MRIC_Peer_Review.Properties.Resources.MRIC;
-            this.pictureBox1.Location = new System.Drawing.Point(8, 414);
+            this.pictureBox1.Location = new System.Drawing.Point(4, 349);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(250, 250);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.Size = new System.Drawing.Size(348, 266);
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
             // 
@@ -240,12 +241,12 @@
             this.Controls.Add(this.btnViewAllComments);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnPostRdoc);
             this.Controls.Add(this.btnCommentReviews);
             this.Controls.Add(this.btnUpdateProfile);
             this.Controls.Add(this.lblWelcome);
             this.Controls.Add(this.linkLogout);
+            this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimizeBox = false;
             this.Name = "Dashboard";

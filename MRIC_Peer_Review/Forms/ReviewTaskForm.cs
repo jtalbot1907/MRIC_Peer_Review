@@ -32,7 +32,9 @@ namespace MRIC_Peer_Review
 
         private void Initialisation()
         {
+            // Default Message and TextBox
             lblReviewerDiplay.Text = "Click on a row in the table to insert a comment.";
+            txtBoxReview.Text = "";
 
             // Enable DataGrid
             dGridAll.Enabled = true;
@@ -41,18 +43,19 @@ namespace MRIC_Peer_Review
             dGridLocked.Enabled = true;
             dGridClosed.Enabled = true;
 
-            //Hide label and panel
+            // Hide label and panel
             txtBoxReview.Visible = false;
             lblRefresh.Visible = false;
             btnSubmitReview.Visible = false;
             btnGoToLink.Visible = false;
 
-            //Set Label to blue color
+            // Set Label to blue color
             lblReviewerDiplay.ForeColor = Color.SteelBlue;
 
+            // Set Default Cursor
             tabReviews.Cursor = Cursors.IBeam;
 
-            //Load Data in DataGrid
+            // Load Data in DataGrid
             DataTable dtAll = reviewTaskExtractor.GetReviewsAllStatus();
             DataTable dtAwaiting = reviewTaskExtractor.GetReviewsAwaiting();
             DataTable dtOpen = reviewTaskExtractor.GetReviewsOpen();
@@ -64,14 +67,14 @@ namespace MRIC_Peer_Review
             dGridLocked.DataSource = dtLocked;
             dGridClosed.DataSource = dtClosed;
 
-            //Text Wrap in DataGrid
+            // Text Wrap in DataGrid
             dGridAll.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
             dGridAwaiting.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
             dGridOpen.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
             dGridLocked.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
             dGridClosed.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
 
-            //Hide Data ReviewId in DataGrid
+            // Hide Data ReviewId in DataGrid
             DataGridViewColumn dGridAllColreviewId = dGridAll.Columns["reviewId"];
             DataGridViewColumn dGridAwaitingColreviewId = dGridAwaiting.Columns["reviewId"];
             DataGridViewColumn dGridOpenColreviewId = dGridOpen.Columns["reviewId"];
@@ -83,7 +86,7 @@ namespace MRIC_Peer_Review
             dGridLockedColreviewId.Visible = false;
             dGridClosedColreviewId.Visible = false;
 
-            //Hide Data Link in DataGrid
+            // Hide Data Link in DataGrid
             DataGridViewColumn dGridAllColLink = dGridAll.Columns["Link"];
             DataGridViewColumn dGridAwaitingColLink = dGridAwaiting.Columns["Link"];
             DataGridViewColumn dGridOpenColLink = dGridOpen.Columns["Link"];
@@ -95,7 +98,7 @@ namespace MRIC_Peer_Review
             dGridLockedColLink.Visible = false;
             dGridClosedColLink.Visible = false;
 
-            //Set Status Column Width
+            // Set Status Column Width
             DataGridViewColumn dGridAllColStatus = dGridAll.Columns["Status"];
             DataGridViewColumn dGridAwaitingColStatus = dGridAwaiting.Columns["Status"];
             DataGridViewColumn dGridOpenColStatus = dGridOpen.Columns["Status"];
@@ -107,7 +110,7 @@ namespace MRIC_Peer_Review
             dGridLockedColStatus.FillWeight = 12;
             dGridClosedColStatus.FillWeight = 12;
 
-            //Set Specialism Column Width
+            // Set Specialism Column Width
             DataGridViewColumn dGridAllColSpecialism = dGridAll.Columns["Specialism"];
             DataGridViewColumn dGridAwaitingColSpecialism = dGridAwaiting.Columns["Specialism"];
             DataGridViewColumn dGridOpenColSpecialism = dGridOpen.Columns["Specialism"];
@@ -341,10 +344,10 @@ namespace MRIC_Peer_Review
                     " Refreshing will discard existing comment.\r Do you want to proceed.", " Warning",
                     MessageBoxButtons.YesNo, MessageBoxIcon.Stop
                     );
+
                 if (result == DialogResult.Yes)
                 {
                     Initialisation();
-                    txtBoxReview.Text = "";
                 }
             }
             else
@@ -358,10 +361,9 @@ namespace MRIC_Peer_Review
             if (txtBoxReview.Text.Length > 0)
             {
                 DialogResult result = MessageBox.Show
-                    (
-                    " Comment has not been submitted.\r Closing will discard existing comment.\r Do you want to proceed.", " Warning",
-                    MessageBoxButtons.YesNo, MessageBoxIcon.Warning
-                    );
+                    (" Comment has not been submitted.\r Closing will discard existing comment.\r Do you want to proceed.", " Warning",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
                 if (result == DialogResult.Yes)
                 {
                     Close();
@@ -381,13 +383,7 @@ namespace MRIC_Peer_Review
         private void btnSubmitReview_Click(object sender, EventArgs e)
         {
             MessageBox.Show
-                    (
-                    " Your comment has been successfully Updated.\r" +
-                    " ",
-                    "Update Successful",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Information
-                    );
+                    (" Your comment has been successfully Updated.\r ","Update Successful",MessageBoxButtons.OK,MessageBoxIcon.Information);
             string comment = txtBoxReview.Text;
             Commenting commenting = new Commenting(reviewId, comment);
             commenting.SaveComment();
