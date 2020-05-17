@@ -31,7 +31,7 @@ namespace MRIC_Peer_Review
             Application.Run(new LoginForm());
         }
 
-        private void linkLogout_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void btnLogout_Click(object sender, EventArgs e)
         {
             this.Close();
             thread = new Thread(openLoginForm);
@@ -93,6 +93,16 @@ namespace MRIC_Peer_Review
         }
 
         private void lblWelcome_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
         {
 
         }

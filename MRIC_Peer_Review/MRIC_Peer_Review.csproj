@@ -152,12 +152,19 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\stats1.png" />
+    <None Include="Resources\stats.png" />
+    <None Include="Resources\worker.png" />
+    <None Include="Resources\luggage.png" />
     <None Include="Resources\network-1.png" />
     <None Include="Resources\men.png" />
     <None Include="Resources\businessman-1.png" />
     <None Include="Resources\comfortable.png" />
     <None Include="Resources\administrator.png" />
     <None Include="Resources\ancient.png" />
+    <None Include="Resources\boss-2.png" />
+    <None Include="Resources\growth.png" />
+    <None Include="Resources\archive.png" />
     <Content Include="Resources\Library.ico" />
     <None Include="Resources\office-material-1.png" />
     <None Include="Resources\text-lines.png" />
