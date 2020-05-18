@@ -21,7 +21,6 @@ namespace MRIC_Peer_Review.Processes
             string sqlQuery = "select rv.reviewId, rd.Title, rv.Specialism, rv.Status, rd.link from reviews rv inner join rdocs rd " +
                 "where rv.rdocId = rd.rdocId and rv.reviewerId = " + reviewerId + "; ";
             return Read(sqlQuery);
-            // should not it be "not review Id"?? reviewerId != " + reviewerId + ";
         }
 
         public DataTable GetReviewsAwaiting()

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Diagnostics;
 using System.Threading;
 using System.Windows.Forms;
 using MRIC_Peer_Review.Forms;
@@ -99,6 +100,11 @@ namespace MRIC_Peer_Review
             thread.SetApartmentState(ApartmentState.STA);
             thread.Start();
         }
-    }
-    
+
+        private void btnWebsite_Click(object sender, EventArgs e)
+        {
+            Process.Start("http://www.mric.mu/");
+        }
+
+    }   
 }

@@ -74,13 +74,14 @@
             this.lblReviewerDiplay.Name = "lblReviewerDiplay";
             this.lblReviewerDiplay.Size = new System.Drawing.Size(883, 48);
             this.lblReviewerDiplay.TabIndex = 20;
-            this.lblReviewerDiplay.Text = "Click on a row i the table to insert a comment.";
+            this.lblReviewerDiplay.Text = "Click on a row in the table to insert a comment.";
             this.lblReviewerDiplay.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // btnSubmitReview
             // 
             this.btnSubmitReview.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSubmitReview.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnSubmitReview.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSubmitReview.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmitReview.ForeColor = System.Drawing.Color.White;
             this.btnSubmitReview.Location = new System.Drawing.Point(764, 495);
@@ -122,6 +123,7 @@
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClose.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClose.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.White;
             this.btnClose.Location = new System.Drawing.Point(27, 495);
@@ -166,7 +168,7 @@
             this.dGridClosed.ShowCellToolTips = false;
             this.dGridClosed.ShowEditingIcon = false;
             this.dGridClosed.ShowRowErrors = false;
-            this.dGridClosed.Size = new System.Drawing.Size(842, 277);
+            this.dGridClosed.Size = new System.Drawing.Size(842, 276);
             this.dGridClosed.TabIndex = 2;
             this.dGridClosed.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGridClosed_CellClick);
             this.dGridClosed.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGridClosed_CellClick);
@@ -207,7 +209,7 @@
             this.dGridLocked.ShowCellToolTips = false;
             this.dGridLocked.ShowEditingIcon = false;
             this.dGridLocked.ShowRowErrors = false;
-            this.dGridLocked.Size = new System.Drawing.Size(842, 277);
+            this.dGridLocked.Size = new System.Drawing.Size(842, 276);
             this.dGridLocked.TabIndex = 2;
             this.dGridLocked.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGridLocked_CellClick);
             this.dGridLocked.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGridLocked_CellClick);
@@ -216,6 +218,7 @@
             // 
             // tabLocked
             // 
+            this.tabLocked.BackColor = System.Drawing.Color.SteelBlue;
             this.tabLocked.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.tabLocked.Controls.Add(this.dGridLocked);
             this.tabLocked.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -225,7 +228,6 @@
             this.tabLocked.Size = new System.Drawing.Size(858, 292);
             this.tabLocked.TabIndex = 7;
             this.tabLocked.Text = "Locked";
-            this.tabLocked.UseVisualStyleBackColor = true;
             // 
             // dGridOpen
             // 
@@ -270,6 +272,7 @@
             // 
             // tabOpen
             // 
+            this.tabOpen.BackColor = System.Drawing.Color.SteelBlue;
             this.tabOpen.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.tabOpen.Controls.Add(this.dGridOpen);
             this.tabOpen.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -279,11 +282,11 @@
             this.tabOpen.Size = new System.Drawing.Size(858, 292);
             this.tabOpen.TabIndex = 6;
             this.tabOpen.Text = "Open";
-            this.tabOpen.UseVisualStyleBackColor = true;
             // 
             // tabAwaiting
             // 
             this.tabAwaiting.AccessibleName = "AwaitingTab";
+            this.tabAwaiting.BackColor = System.Drawing.Color.SteelBlue;
             this.tabAwaiting.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.tabAwaiting.Controls.Add(this.dGridAwaiting);
             this.tabAwaiting.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -293,7 +296,6 @@
             this.tabAwaiting.Size = new System.Drawing.Size(858, 292);
             this.tabAwaiting.TabIndex = 5;
             this.tabAwaiting.Text = "Awaiting";
-            this.tabAwaiting.UseVisualStyleBackColor = true;
             // 
             // dGridAwaiting
             // 
@@ -375,7 +377,7 @@
             // 
             // tabAllReviews
             // 
-            this.tabAllReviews.BackColor = System.Drawing.Color.White;
+            this.tabAllReviews.BackColor = System.Drawing.Color.SteelBlue;
             this.tabAllReviews.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.tabAllReviews.Controls.Add(this.dGridAll);
             this.tabAllReviews.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -419,6 +421,7 @@
             // 
             // tabClosed
             // 
+            this.tabClosed.BackColor = System.Drawing.Color.SteelBlue;
             this.tabClosed.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.tabClosed.Controls.Add(this.dGridClosed);
             this.tabClosed.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -428,7 +431,6 @@
             this.tabClosed.Size = new System.Drawing.Size(858, 292);
             this.tabClosed.TabIndex = 8;
             this.tabClosed.Text = "Closed";
-            this.tabClosed.UseVisualStyleBackColor = true;
             // 
             // btnGoToLink
             // 

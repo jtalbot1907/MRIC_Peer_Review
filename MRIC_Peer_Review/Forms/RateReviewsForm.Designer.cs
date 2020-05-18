@@ -33,10 +33,13 @@
             this.lblReviewerDiplay = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnSubmitReview = new System.Windows.Forms.Button();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.label1 = new System.Windows.Forms.Label();
+            this.numSel = new System.Windows.Forms.NumericUpDown();
+            this.lblRate = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnRefresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dGridRateReview)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSel)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dGridRateReview
@@ -54,7 +57,7 @@
             this.dGridRateReview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGridRateReview.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.dGridRateReview.GridColor = System.Drawing.Color.White;
-            this.dGridRateReview.Location = new System.Drawing.Point(40, 43);
+            this.dGridRateReview.Location = new System.Drawing.Point(6, 7);
             this.dGridRateReview.Name = "dGridRateReview";
             this.dGridRateReview.ReadOnly = true;
             this.dGridRateReview.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -73,31 +76,33 @@
             this.dGridRateReview.ShowCellToolTips = false;
             this.dGridRateReview.ShowEditingIcon = false;
             this.dGridRateReview.ShowRowErrors = false;
-            this.dGridRateReview.Size = new System.Drawing.Size(719, 227);
+            this.dGridRateReview.Size = new System.Drawing.Size(788, 246);
             this.dGridRateReview.TabIndex = 2;
             this.dGridRateReview.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGridRateReview_CellClick);
             this.dGridRateReview.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGridRateReview_CellClick);
             this.dGridRateReview.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGridRateReview_CellClick);
-            this.dGridRateReview.CellContextMenuStripChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGridRateReview_CellClick);
+            this.dGridRateReview.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGridRateReview_CellClick);
             // 
             // lblReviewerDiplay
             // 
             this.lblReviewerDiplay.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lblReviewerDiplay.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
-            this.lblReviewerDiplay.ForeColor = System.Drawing.Color.SteelBlue;
-            this.lblReviewerDiplay.Location = new System.Drawing.Point(12, 9);
+            this.lblReviewerDiplay.ForeColor = System.Drawing.Color.Red;
+            this.lblReviewerDiplay.Location = new System.Drawing.Point(47, 302);
             this.lblReviewerDiplay.Name = "lblReviewerDiplay";
-            this.lblReviewerDiplay.Size = new System.Drawing.Size(360, 22);
+            this.lblReviewerDiplay.Size = new System.Drawing.Size(627, 132);
             this.lblReviewerDiplay.TabIndex = 21;
-            this.lblReviewerDiplay.Text = "Click on a row i the table to rate the review";
+            this.lblReviewerDiplay.Text = "Click on a row to rate a Comment";
+            this.lblReviewerDiplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnClose
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClose.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClose.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(12, 398);
+            this.btnClose.Location = new System.Drawing.Point(12, 456);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(123, 40);
             this.btnClose.TabIndex = 22;
@@ -109,60 +114,90 @@
             // 
             this.btnSubmitReview.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSubmitReview.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnSubmitReview.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSubmitReview.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmitReview.ForeColor = System.Drawing.Color.White;
-            this.btnSubmitReview.Location = new System.Drawing.Point(665, 398);
+            this.btnSubmitReview.Location = new System.Drawing.Point(725, 456);
             this.btnSubmitReview.Name = "btnSubmitReview";
             this.btnSubmitReview.Size = new System.Drawing.Size(123, 40);
             this.btnSubmitReview.TabIndex = 23;
             this.btnSubmitReview.Text = "Submit";
             this.btnSubmitReview.UseVisualStyleBackColor = false;
-            this.btnSubmitReview.Visible = false;
             this.btnSubmitReview.Click += new System.EventHandler(this.btnSubmitReview_Click);
             // 
-            // numericUpDown1
+            // numSel
             // 
-            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.ForeColor = System.Drawing.Color.SteelBlue;
-            this.numericUpDown1.Location = new System.Drawing.Point(679, 276);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.numSel.BackColor = System.Drawing.Color.White;
+            this.numSel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.numSel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numSel.ForeColor = System.Drawing.Color.SteelBlue;
+            this.numSel.Location = new System.Drawing.Point(769, 369);
+            this.numSel.Maximum = new decimal(new int[] {
             10,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(80, 22);
-            this.numericUpDown1.TabIndex = 24;
-            this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numSel.Name = "numSel";
+            this.numSel.Size = new System.Drawing.Size(42, 25);
+            this.numSel.TabIndex = 24;
+            this.numSel.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numSel.ValueChanged += new System.EventHandler(this.numSel_ValueChanged);
             // 
-            // label1
+            // lblRate
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.label1.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label1.Location = new System.Drawing.Point(469, 278);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(204, 22);
-            this.label1.TabIndex = 25;
-            this.label1.Text = "Rate the Review out of ten";
+            this.lblRate.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.lblRate.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.lblRate.ForeColor = System.Drawing.Color.SteelBlue;
+            this.lblRate.Location = new System.Drawing.Point(690, 346);
+            this.lblRate.Name = "lblRate";
+            this.lblRate.Size = new System.Drawing.Size(140, 22);
+            this.lblRate.TabIndex = 25;
+            this.lblRate.Text = "Rate the Comment";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.dGridRateReview);
+            this.panel1.Location = new System.Drawing.Point(28, 29);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(804, 264);
+            this.panel1.TabIndex = 26;
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnRefresh.BackColor = System.Drawing.Color.White;
+            this.btnRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRefresh.Font = new System.Drawing.Font("Arial", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefresh.ForeColor = System.Drawing.Color.Black;
+            this.btnRefresh.Location = new System.Drawing.Point(694, 289);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(118, 29);
+            this.btnRefresh.TabIndex = 27;
+            this.btnRefresh.Text = "Cancel Selection";
+            this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // RateReviewsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.numericUpDown1);
+            this.ClientSize = new System.Drawing.Size(860, 508);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.numSel);
             this.Controls.Add(this.btnSubmitReview);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lblReviewerDiplay);
-            this.Controls.Add(this.dGridRateReview);
+            this.Controls.Add(this.lblRate);
+            this.Controls.Add(this.btnRefresh);
             this.Name = "RateReviewsForm";
             this.Text = "RateReviews";
             this.Load += new System.EventHandler(this.RateReviewsForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dGridRateReview)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSel)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -173,7 +208,9 @@
         private System.Windows.Forms.Label lblReviewerDiplay;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnSubmitReview;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.NumericUpDown numSel;
+        private System.Windows.Forms.Label lblRate;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnRefresh;
     }
 }

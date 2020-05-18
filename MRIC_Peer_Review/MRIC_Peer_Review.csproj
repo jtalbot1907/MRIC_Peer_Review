@@ -163,6 +163,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\line-chart.png" />
+    <None Include="Resources\stats-1.png" />
+    <None Include="Resources\MRIC1.png" />
     <None Include="Resources\stats1.png" />
     <None Include="Resources\stats.png" />
     <None Include="Resources\worker.png" />

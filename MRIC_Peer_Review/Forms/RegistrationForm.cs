@@ -47,7 +47,13 @@ namespace MRIC_Peer_Review
             Registration registration = new Registration();
             registration.Register(newUser);
 
-            MessageBox.Show(" You have registered successfully.\r You can now login with your Username and Password.", "Welcome To MRIC Peer Review", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(
+                " You have been registered successfully." +
+                "\r You can now login with your Username and Password.", 
+                "Welcome To MRIC Peer Review", 
+                MessageBoxButtons.OK, 
+                MessageBoxIcon.Information
+                );
 
             this.Close();
             thread = new Thread(openLoginForm);
@@ -122,5 +128,4 @@ namespace MRIC_Peer_Review
             }
         }
     }
-
 }

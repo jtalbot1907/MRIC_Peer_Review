@@ -21,26 +21,45 @@ namespace MRIC_Peer_Review.Forms
             InitializeComponent();
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
+        private void LoadDataInDataGridView()
         {
-            this.Close();
+            //Extract Data
+            ExtractComments extractComments = new ExtractComments();
+            dGridRateReview.DataSource = extractComments.GetAllOpenAndLockedComments();
+
+            // Enable DataGrid
+            dGridRateReview.Enabled = true;
+
+            // TextWrap in DataGrid
+            dGridRateReview.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+
+            // Hide CommentId an Rate
+            dGridRateReview.Columns["CommentId"].Visible = false;
+            dGridRateReview.Columns["Rate"].Visible = false;
+
+            // Resize column Width in DataGrid
+            dGridRateReview.Columns["Title"].FillWeight = 15;
+            dGridRateReview.Columns["Comments"].FillWeight = 60;
+            dGridRateReview.Columns["Status"].FillWeight = 10;
+
+            // Hide Items
+            lblRate.Visible = false;
+            numSel.Visible = false;
+            btnSubmitReview.Visible = false;
+            lblReviewerDiplay.Text = "Click on a row to rate a Comment";
+            lblReviewerDiplay.ForeColor = Color.Red;
+
+
         }
 
         private void btnSubmitReview_Click(object sender, EventArgs e)
         {
-            int rate = (int)numericUpDown1.Value;
+            int rate = (int)numSel.Value;
             rateRecorder = new RateRecorder(commentId, rate);
             rateRecorder.RecordRate();
             LoadDataInDataGridView();
         }
-
-        private void LoadDataInDataGridView()
-        {
-            ExtractComments extractComments = new ExtractComments();
-            dGridRateReview.DataSource = extractComments.GetAllOpenAndLockedComments();
-            dGridRateReview.Columns["commentId"].Visible = false;
-        }
-
+        
         private void RateReviewsForm_Load(object sender, EventArgs e)
         {
             LoadDataInDataGridView();
@@ -48,7 +67,38 @@ namespace MRIC_Peer_Review.Forms
 
         private void dGridRateReview_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            commentId = (int)dGridRateReview.Rows[e.RowIndex].Cells["commentId"].Value;
+            if (dGridRateReview.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            {
+                // Full Row Selection
+                dGridRateReview.CurrentRow.Selected = true;
+
+                // Disable DataTable Click
+                dGridRateReview.Enabled = false;
+
+                // Comment Selection to be Rated
+                commentId = (int)dGridRateReview.Rows[e.RowIndex].Cells["CommentId"].Value;
+
+                // Change State
+                lblRate.Visible = true;
+                numSel.Visible = true;
+                lblReviewerDiplay.ForeColor = Color.SteelBlue;
+                lblReviewerDiplay.Text = "Selected Comment:\r\r" + dGridRateReview.Rows[e.RowIndex].Cells["Comments"].FormattedValue.ToString();
+            }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void numSel_ValueChanged(object sender, EventArgs e)
+        {
+            btnSubmitReview.Visible = true;
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            LoadDataInDataGridView();
         }
     }
 }

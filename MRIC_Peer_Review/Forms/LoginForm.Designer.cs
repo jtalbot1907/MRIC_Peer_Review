@@ -44,15 +44,17 @@
             // btnLogin
             // 
             this.btnLogin.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogin.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.SystemColors.Control;
             this.btnLogin.Location = new System.Drawing.Point(86, 149);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(90, 35);
-            this.btnLogin.TabIndex = 4;
+            this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            this.btnLogin.Enter += new System.EventHandler(this.LoginForm_Load);
             // 
             // lblUsername
             // 
@@ -99,11 +101,12 @@
             // linkRegistration
             // 
             this.linkRegistration.AutoSize = true;
+            this.linkRegistration.Cursor = System.Windows.Forms.Cursors.Hand;
             this.linkRegistration.LinkColor = System.Drawing.Color.RoyalBlue;
             this.linkRegistration.Location = new System.Drawing.Point(10, 189);
             this.linkRegistration.Name = "linkRegistration";
             this.linkRegistration.Size = new System.Drawing.Size(113, 13);
-            this.linkRegistration.TabIndex = 3;
+            this.linkRegistration.TabIndex = 4;
             this.linkRegistration.TabStop = true;
             this.linkRegistration.Text = "New User Registration";
             this.linkRegistration.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkRegistration_LinkClicked);

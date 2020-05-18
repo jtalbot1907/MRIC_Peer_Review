@@ -143,6 +143,16 @@ namespace MRIC_Peer_Review.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap line_chart {
+            get {
+                object obj = ResourceManager.GetObject("line-chart", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap luggage {
             get {
                 object obj = ResourceManager.GetObject("luggage", resourceCulture);
@@ -166,6 +176,16 @@ namespace MRIC_Peer_Review.Properties {
         internal static System.Drawing.Bitmap MRIC {
             get {
                 object obj = ResourceManager.GetObject("MRIC", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MRIC1 {
+            get {
+                object obj = ResourceManager.GetObject("MRIC1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -216,6 +236,16 @@ namespace MRIC_Peer_Review.Properties {
         internal static System.Drawing.Bitmap stats {
             get {
                 object obj = ResourceManager.GetObject("stats", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap stats_1 {
+            get {
+                object obj = ResourceManager.GetObject("stats-1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
