@@ -91,8 +91,10 @@
       <DependentUpon>PostRDocForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Processes\Commenting.cs" />
-    <Compile Include="Processes\CommentRating.cs" />
+    <Compile Include="Processes\ReviewingComments.cs" />
+    <Compile Include="Processes\ExtractComments.cs" />
     <Compile Include="Processes\LogIn.cs" />
+    <Compile Include="Processes\RateRecorder.cs" />
     <Compile Include="Processes\Registration.cs" />
     <Compile Include="Processes\PostingRDoc.cs" />
     <Compile Include="Processes\TargetingReviewer.cs" />
@@ -174,6 +176,7 @@
     <None Include="Resources\boss-2.png" />
     <None Include="Resources\growth.png" />
     <None Include="Resources\archive.png" />
+    <None Include="Resources\ancient1.png" />
     <Content Include="Resources\Library.ico" />
     <None Include="Resources\office-material-1.png" />
     <None Include="Resources\text-lines.png" />

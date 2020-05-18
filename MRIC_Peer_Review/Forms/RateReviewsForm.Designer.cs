@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dGridRateReview = new System.Windows.Forms.DataGridView();
             this.lblReviewerDiplay = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
@@ -47,25 +47,25 @@
             this.dGridRateReview.AllowUserToResizeRows = false;
             this.dGridRateReview.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dGridRateReview.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dGridRateReview.BackgroundColor = System.Drawing.Color.Silver;
+            this.dGridRateReview.BackgroundColor = System.Drawing.Color.White;
             this.dGridRateReview.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dGridRateReview.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
-            this.dGridRateReview.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dGridRateReview.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.dGridRateReview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGridRateReview.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.dGridRateReview.GridColor = System.Drawing.Color.White;
-            this.dGridRateReview.Location = new System.Drawing.Point(36, 43);
+            this.dGridRateReview.Location = new System.Drawing.Point(40, 43);
             this.dGridRateReview.Name = "dGridRateReview";
             this.dGridRateReview.ReadOnly = true;
             this.dGridRateReview.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dGridRateReview.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dGridRateReview.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dGridRateReview.RowHeadersVisible = false;
             this.dGridRateReview.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dGridRateReview.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -73,8 +73,12 @@
             this.dGridRateReview.ShowCellToolTips = false;
             this.dGridRateReview.ShowEditingIcon = false;
             this.dGridRateReview.ShowRowErrors = false;
-            this.dGridRateReview.Size = new System.Drawing.Size(723, 227);
+            this.dGridRateReview.Size = new System.Drawing.Size(719, 227);
             this.dGridRateReview.TabIndex = 2;
+            this.dGridRateReview.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGridRateReview_CellClick);
+            this.dGridRateReview.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGridRateReview_CellClick);
+            this.dGridRateReview.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGridRateReview_CellClick);
+            this.dGridRateReview.CellContextMenuStripChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGridRateReview_CellClick);
             // 
             // lblReviewerDiplay
             // 
@@ -156,6 +160,7 @@
             this.Controls.Add(this.dGridRateReview);
             this.Name = "RateReviewsForm";
             this.Text = "RateReviews";
+            this.Load += new System.EventHandler(this.RateReviewsForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dGridRateReview)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);

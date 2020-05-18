@@ -67,6 +67,5 @@ namespace MRIC_Peer_Review
             connection.Close();
             return returnValue;
         }
-
     }
 }

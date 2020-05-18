@@ -54,7 +54,7 @@ namespace MRIC_Peer_Review.Processes
                 if (isReviewerNotOverload)
                 {
                     sqlQuery = "INSERT INTO Reviews (rdocId,specialism,reviewerId) VALUES" +
-                        "(" + rdocId + ",'" + specialism + "'," + reviewerId + "); ";
+                        "(" +rdocId+ ",'" +specialism+ "'," +reviewerId+ "); ";
                     Create(sqlQuery);
                 }
             }
@@ -63,7 +63,7 @@ namespace MRIC_Peer_Review.Processes
         private DataTable GetAllReviewRequestsForAnRDoc()
         {
             DataTable dt;
-            string sqlQuery = "select specialism, minGrade from rDocSpecialism where rdocId = " + rdocId + ";";
+            string sqlQuery = "select specialism, minGrade from rDocSpecialism where rdocId = " +rdocId+ ";";
             dt = Read(sqlQuery);
             Console.WriteLine("GetAllReviewRequestsForAnRDoc");
             //Utilities.DataTableDisplayer.Display(dt);
@@ -76,15 +76,15 @@ namespace MRIC_Peer_Review.Processes
             int count;
             string sqlQuery = "select count(reviewId) from Reviews where reviewerId=" + reviewerId + " AND status = 'awaiting';";
             count = GetInteger(sqlQuery);
-            Console.WriteLine("Count of  Reviewer " + reviewerId + "is " + count);
+            Console.WriteLine("Count of  Reviewer " +reviewerId+ "is " +count);
             isReviewerNotOverload = (count < 5) ? true : false;
             return isReviewerNotOverload;
         }
 
-        private DataTable GetListOfReviewersWithSpecialism(string sp, int minGrade)
+        private DataTable GetListOfReviewersWithSpecialism(string specialism, int minGrade)
         {
             string sqlQuery = "select reviewerId, specialism from reviewerspecialisms " +
-                "where specialism ='" + sp + "' and average>= " + minGrade + " and NOT reviewerId  = " + authorId + "; ";
+                "where specialism ='" +specialism+ "' and average>= " +minGrade+ " and NOT reviewerId  = " +authorId+ "; ";
             DataTable dt = Read(sqlQuery);
             Console.WriteLine("GetListOfReviewersWithSpecialism");
             //Utilities.DataTableDisplayer.Display(dt);

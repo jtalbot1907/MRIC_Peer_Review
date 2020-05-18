@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace MRIC_Peer_Review.Processes
 {
-    class CommentRating : DatabaseQuery
+    class ReviewingComments : DatabaseQuery
     {
         int commentId;
 
-        public CommentRating (int commentId)
+        public ReviewingComments (int commentId)
         {
             this.commentId = commentId;
         }

@@ -23,7 +23,7 @@ namespace MRIC_Peer_Review
         private void Dashboard_Load(object sender, EventArgs e)
         {
             fullName = new LogIn(userId).GetFullName();
-            this.lblWelcome.Text = "Welcome, " + fullName;
+            this.lblWelcome.Text = "Welcome,  "+fullName+".";
         }
 
         private void openLoginForm()

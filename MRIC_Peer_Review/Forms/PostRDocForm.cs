@@ -8,6 +8,7 @@ namespace MRIC_Peer_Review
 {
     public partial class PostRdocForm : Form
     {
+        int authorId = LoginForm.authorId;
         DatabaseQuery db = new DatabaseQuery();
         DataTable dt = new DataTable("SelectedrDocSpecialism");
         PostingRDoc reviewRequest;
@@ -74,7 +75,7 @@ namespace MRIC_Peer_Review
             int rdocId;
             rDoc.Title = rtxtTitle.Text.Trim().ToUpper();
             rDoc.Link = rtxtLink.Text.Trim().ToLower();
-            rDoc.AuthorId = 17; //TODO Hardcode
+            rDoc.AuthorId = authorId;
             rDoc.rDocSpecialism = dt;
             reviewRequest = new PostingRDoc(rDoc);
             reviewRequest.MakeReviewRequest();

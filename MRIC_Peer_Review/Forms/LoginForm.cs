@@ -9,6 +9,7 @@ namespace MRIC_Peer_Review {
     public partial class LoginForm : Form
     {
         Thread thread;
+        public static int authorId;
         int userId;
 
         public LoginForm()
@@ -50,6 +51,7 @@ namespace MRIC_Peer_Review {
             if (logIn.Authenticate())
             {
                 userId = logIn.GetUserId();
+                authorId = userId;
                 //Login Correct
                 this.Close();
                 thread = new Thread(openDashboard);
@@ -87,7 +89,5 @@ namespace MRIC_Peer_Review {
             thread.SetApartmentState(ApartmentState.STA);
             thread.Start();
         }
-
-       
     }
 }
