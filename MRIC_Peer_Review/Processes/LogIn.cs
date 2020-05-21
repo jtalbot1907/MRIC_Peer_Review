@@ -6,6 +6,7 @@ using MRIC_Peer_Review.Utilities;
 
 namespace MRIC_Peer_Review.Processes
 {
+    // Inheritance
     class LogIn : DatabaseQuery
     {
         private string username;

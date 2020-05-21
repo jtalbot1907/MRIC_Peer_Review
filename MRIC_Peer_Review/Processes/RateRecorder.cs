@@ -26,16 +26,16 @@ namespace MRIC_Peer_Review.Processes
         {
             int countCommentsForAReview;
             int countRatedComments;
-
             string sqlQuery = "SELECT reviewId from comments where commentId = " + commentId + ";";
+            string newStatus = status;
             reviewId = GetInteger(sqlQuery);
             sqlQuery = "SELECT status from reviews where reviewId = " + reviewId + ";";
             status = GetString(sqlQuery);
-            string newStatus = status;
             sqlQuery = "SELECT count(commentId) from comments where reviewId = " + reviewId + ";";
             countCommentsForAReview = GetInteger(sqlQuery);
             sqlQuery = "SELECT count(commentId) from comments where reviewId = " + reviewId + " AND rate IS NOT NULL;";
             countRatedComments = GetInteger(sqlQuery);
+
             switch (status)
             {
                 case "open":
@@ -51,7 +51,9 @@ namespace MRIC_Peer_Review.Processes
                         newStatus = "locked";
                     }
                     break;
+
                 case "locked":
+
                     if (countRatedComments == countCommentsForAReview)
                     {
                         //change status from locked to closed
