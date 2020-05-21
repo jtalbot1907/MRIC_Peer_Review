@@ -163,6 +163,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\office-material-12.png" />
+    <None Include="Resources\office-material-11.png" />
+    <None Include="Resources\school-material-11.png" />
+    <None Include="Resources\text-lines2.png" />
+    <None Include="Resources\office-material-2.png" />
+    <None Include="Resources\text-lines1.png" />
+    <None Include="Resources\school-material1.png" />
     <None Include="Resources\line-chart.png" />
     <None Include="Resources\stats-1.png" />
     <None Include="Resources\MRIC1.png" />
@@ -180,6 +187,11 @@
     <None Include="Resources\growth.png" />
     <None Include="Resources\archive.png" />
     <None Include="Resources\ancient1.png" />
+    <None Include="Resources\check-box.png" />
+    <None Include="Resources\check-mark.png" />
+    <None Include="Resources\contract.png" />
+    <None Include="Resources\contract1.png" />
+    <None Include="Resources\contract2.png" />
     <Content Include="Resources\Library.ico" />
     <None Include="Resources\office-material-1.png" />
     <None Include="Resources\text-lines.png" />

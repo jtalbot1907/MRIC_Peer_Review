@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpdateProfileForm));
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.chkListSpecialisms = new System.Windows.Forms.CheckedListBox();
@@ -212,8 +213,9 @@
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "UpdateProfileForm";
-            this.Text = "Form1";
+            this.Text = "Update Profile";
             this.Load += new System.EventHandler(this.UpdateProfile_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MRIC_Peer_Review.Processes;
 
-
 namespace MRIC_Peer_Review.Forms
 {
     public partial class UpdateProfileForm : Form
@@ -20,7 +19,6 @@ namespace MRIC_Peer_Review.Forms
         string password;
         string username;
         DatabaseQuery db = new DatabaseQuery();
-
 
         public UpdateProfileForm(int userId)
         {
@@ -36,7 +34,6 @@ namespace MRIC_Peer_Review.Forms
             txtSurname.Text = surname;
             username = new LogIn(userId).GetUsername();
             txtUsername.Text = username;
-
             txtPassword.Text = password;
 
             //Loads the Specialism from DB in the Check Box
@@ -46,10 +43,6 @@ namespace MRIC_Peer_Review.Forms
             {
                 chkListSpecialisms.Items.Add(dr.ItemArray[0].ToString());
             }
-
-
         }
-
-
     }
 }

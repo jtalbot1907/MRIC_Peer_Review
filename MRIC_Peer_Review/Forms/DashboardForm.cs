@@ -105,6 +105,5 @@ namespace MRIC_Peer_Review
         {
             Process.Start("http://www.mric.mu/");
         }
-
     }   
 }
