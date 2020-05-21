@@ -221,7 +221,7 @@
             this.groupBox1.Size = new System.Drawing.Size(471, 324);
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Review Details";
+            this.groupBox1.Text = "Document Details";
             // 
             // PostRdocForm
             // 
@@ -233,10 +233,12 @@
             this.Controls.Add(this.panelMinGrade);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnNext);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "PostRdocForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Make Review Request";
+            this.Text = "Post Research Document";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.MakeReviewRequest_Load);
             this.panelMinGrade.ResumeLayout(false);

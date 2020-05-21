@@ -64,11 +64,11 @@
             this.btnPostRdoc.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPostRdoc.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.btnPostRdoc.ForeColor = System.Drawing.Color.AliceBlue;
-            this.btnPostRdoc.Location = new System.Drawing.Point(342, 224);
+            this.btnPostRdoc.Location = new System.Drawing.Point(342, 267);
             this.btnPostRdoc.Name = "btnPostRdoc";
             this.btnPostRdoc.Size = new System.Drawing.Size(200, 50);
             this.btnPostRdoc.TabIndex = 2;
-            this.btnPostRdoc.Text = "Post Documents";
+            this.btnPostRdoc.Text = "Post Reviews";
             this.btnPostRdoc.UseVisualStyleBackColor = false;
             this.btnPostRdoc.Click += new System.EventHandler(this.btnPostRDoc_Click);
             // 
@@ -78,7 +78,7 @@
             this.btnCommentReviews.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCommentReviews.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.btnCommentReviews.ForeColor = System.Drawing.Color.AliceBlue;
-            this.btnCommentReviews.Location = new System.Drawing.Point(765, 224);
+            this.btnCommentReviews.Location = new System.Drawing.Point(765, 267);
             this.btnCommentReviews.Name = "btnCommentReviews";
             this.btnCommentReviews.Size = new System.Drawing.Size(200, 50);
             this.btnCommentReviews.TabIndex = 3;
@@ -106,7 +106,7 @@
             this.btnUpdateProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdateProfile.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateProfile.ForeColor = System.Drawing.Color.SteelBlue;
-            this.btnUpdateProfile.Location = new System.Drawing.Point(806, 43);
+            this.btnUpdateProfile.Location = new System.Drawing.Point(959, 43);
             this.btnUpdateProfile.Name = "btnUpdateProfile";
             this.btnUpdateProfile.Size = new System.Drawing.Size(94, 25);
             this.btnUpdateProfile.TabIndex = 12;
@@ -134,7 +134,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label1.Location = new System.Drawing.Point(-1, 658);
+            this.label1.Location = new System.Drawing.Point(-1, 717);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(162, 19);
             this.label1.TabIndex = 21;
@@ -148,7 +148,7 @@
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.Color.SteelBlue;
-            this.btnLogout.Location = new System.Drawing.Point(971, 43);
+            this.btnLogout.Location = new System.Drawing.Point(1124, 43);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(94, 25);
             this.btnLogout.TabIndex = 23;
@@ -178,7 +178,7 @@
             this.btnWebsite.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnWebsite.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnWebsite.ForeColor = System.Drawing.Color.SteelBlue;
-            this.btnWebsite.Location = new System.Drawing.Point(641, 43);
+            this.btnWebsite.Location = new System.Drawing.Point(794, 43);
             this.btnWebsite.Name = "btnWebsite";
             this.btnWebsite.Size = new System.Drawing.Size(94, 25);
             this.btnWebsite.TabIndex = 26;
@@ -191,7 +191,7 @@
             this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox4.Image = global::MRIC_Peer_Review.Properties.Resources.line_chart;
-            this.pictureBox4.Location = new System.Drawing.Point(613, 43);
+            this.pictureBox4.Location = new System.Drawing.Point(766, 43);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(25, 25);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -215,7 +215,7 @@
             // 
             this.picCommentReview.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picCommentReview.Image = global::MRIC_Peer_Review.Properties.Resources.contract2;
-            this.picCommentReview.Location = new System.Drawing.Point(675, 201);
+            this.picCommentReview.Location = new System.Drawing.Point(675, 244);
             this.picCommentReview.Name = "picCommentReview";
             this.picCommentReview.Size = new System.Drawing.Size(80, 80);
             this.picCommentReview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -251,7 +251,7 @@
             // 
             this.picPostDoc.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picPostDoc.Image = global::MRIC_Peer_Review.Properties.Resources.school_material_11;
-            this.picPostDoc.Location = new System.Drawing.Point(254, 201);
+            this.picPostDoc.Location = new System.Drawing.Point(254, 244);
             this.picPostDoc.Name = "picPostDoc";
             this.picPostDoc.Size = new System.Drawing.Size(80, 80);
             this.picPostDoc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -263,7 +263,7 @@
             // 
             this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox6.Image = global::MRIC_Peer_Review.Properties.Resources.businessman_1;
-            this.pictureBox6.Location = new System.Drawing.Point(943, 43);
+            this.pictureBox6.Location = new System.Drawing.Point(1096, 43);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(25, 25);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -276,7 +276,7 @@
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = global::MRIC_Peer_Review.Properties.Resources.boss_2;
-            this.pictureBox2.Location = new System.Drawing.Point(778, 43);
+            this.pictureBox2.Location = new System.Drawing.Point(931, 43);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(25, 25);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -288,7 +288,7 @@
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = global::MRIC_Peer_Review.Properties.Resources.MRIC;
-            this.pictureBox1.Location = new System.Drawing.Point(801, 432);
+            this.pictureBox1.Location = new System.Drawing.Point(954, 491);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(300, 290);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -300,7 +300,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1116, 677);
+            this.ClientSize = new System.Drawing.Size(1269, 736);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.btnWebsite);
             this.Controls.Add(this.pictureBox3);
@@ -320,12 +320,12 @@
             this.Controls.Add(this.btnUpdateProfile);
             this.Controls.Add(this.pictureBox1);
             this.ForeColor = System.Drawing.Color.MintCream;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimizeBox = false;
+            this.MaximizeBox = false;
             this.Name = "Dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " MRIC Peer-Review Dashboard";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Dashboard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
