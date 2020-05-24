@@ -22,7 +22,7 @@ namespace MRIC_Peer_Review
         DatabaseQuery db = new DatabaseQuery();
         DataTable dt = new DataTable();
         private readonly ExtractReviews reviewTaskExtractor;
-        //This is a comment from rakesh
+
         public ReviewTasks(int reviewerId)
         {
             InitializeComponent();

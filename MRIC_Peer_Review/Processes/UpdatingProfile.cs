@@ -3,30 +3,27 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 
 namespace MRIC_Peer_Review.Processes
 {
     class UpdatingProfile : DatabaseQuery
     {
-
         private string specialism;
         private string firstname;
         private int surname;
-        public UpdatingProfile(int reviewId, string comments, int rate)
+        private int reviewerId;
+
+        public UpdatingProfile(int reviewerId)
         {
-        //    this. = reviewId;
-        //    this.comments = comments;
-        //    this.rate = rate;
+            this.reviewerId = reviewerId;
         }
 
-        public void SaveComment()
+        // Get Specialisation for a specific reviewer
+        public DataTable getSpecialismForUser()
         {
-        //    string sqlQuery = "INSERT INTO comments (reviewId, comments, rate) " +
-        //        "VALUES (" + reviewId + ", '" + comments + "'," + rate + ");";
-        //    Create(sqlQuery);
-        //    sqlQuery = "Update Reviews SET status = 'open' where reviewId = " + reviewId + ";";
-        //    Console.WriteLine(sqlQuery);
-        //    Update(sqlQuery);
+            string sqlQuery = "SELECT specialism from reviewerspecialisms where reviewerId = "+reviewerId+";";
+            return Read(sqlQuery);
         }
     }
 }

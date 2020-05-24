@@ -20,7 +20,7 @@ namespace MRIC_Peer_Review {
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
-            txtUsername.Text = "jtalbot";
+            txtUsername.Text = "jp";
             txtPassword.Text = "12345";
         }
 

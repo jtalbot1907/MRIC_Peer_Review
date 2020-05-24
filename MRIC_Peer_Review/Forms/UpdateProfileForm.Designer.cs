@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpdateProfileForm));
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
@@ -43,8 +44,10 @@
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.dGridSpecialism = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGridSpecialism)).BeginInit();
             this.SuspendLayout();
             // 
             // btnUpdate
@@ -205,11 +208,49 @@
             this.pictureBox1.TabIndex = 22;
             this.pictureBox1.TabStop = false;
             // 
+            // dGridSpecialism
+            // 
+            this.dGridSpecialism.AllowUserToAddRows = false;
+            this.dGridSpecialism.AllowUserToDeleteRows = false;
+            this.dGridSpecialism.AllowUserToResizeColumns = false;
+            this.dGridSpecialism.AllowUserToResizeRows = false;
+            this.dGridSpecialism.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dGridSpecialism.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dGridSpecialism.BackgroundColor = System.Drawing.Color.White;
+            this.dGridSpecialism.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dGridSpecialism.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
+            this.dGridSpecialism.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            this.dGridSpecialism.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dGridSpecialism.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.dGridSpecialism.GridColor = System.Drawing.Color.White;
+            this.dGridSpecialism.Location = new System.Drawing.Point(477, 15);
+            this.dGridSpecialism.Name = "dGridSpecialism";
+            this.dGridSpecialism.ReadOnly = true;
+            this.dGridSpecialism.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dGridSpecialism.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dGridSpecialism.RowHeadersVisible = false;
+            this.dGridSpecialism.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            this.dGridSpecialism.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dGridSpecialism.ShowCellErrors = false;
+            this.dGridSpecialism.ShowCellToolTips = false;
+            this.dGridSpecialism.ShowEditingIcon = false;
+            this.dGridSpecialism.ShowRowErrors = false;
+            this.dGridSpecialism.Size = new System.Drawing.Size(265, 423);
+            this.dGridSpecialism.TabIndex = 38;
+            // 
             // UpdateProfileForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(493, 450);
+            this.ClientSize = new System.Drawing.Size(754, 450);
+            this.Controls.Add(this.dGridSpecialism);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
@@ -220,6 +261,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGridSpecialism)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -240,5 +282,6 @@
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DataGridView dGridSpecialism;
     }
 }

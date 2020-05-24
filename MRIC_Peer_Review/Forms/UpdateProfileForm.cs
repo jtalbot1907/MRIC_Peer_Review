@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Drawing.Text;
 using System.Windows.Forms;
 using MRIC_Peer_Review.Processes;
 
@@ -19,6 +14,7 @@ namespace MRIC_Peer_Review.Forms
         string password;
         string username;
         DatabaseQuery db = new DatabaseQuery();
+        DataTable dtSpecialism = new DataTable();
 
         public UpdateProfileForm(int userId)
         {
