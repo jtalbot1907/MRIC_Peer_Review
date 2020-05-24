@@ -67,5 +67,16 @@ namespace MRIC_Peer_Review
             connection.Close();
             return returnValue;
         }
+
+        protected double GetDouble(string sqlQuery)
+        {
+            Double returnValue;
+            cmd = new MySqlCommand(sqlQuery, connection);
+            cmd.CommandType = CommandType.Text;
+            connection.Open();
+            returnValue = Convert.ToDouble(cmd.ExecuteScalar());
+            connection.Close();
+            return returnValue;
+        }
     }
 }
