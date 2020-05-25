@@ -34,7 +34,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReviewTasks));
-            this.lblReviewerDiplay = new System.Windows.Forms.Label();
+            this.lblReviewerDisplay = new System.Windows.Forms.Label();
             this.btnSubmitReview = new System.Windows.Forms.Button();
             this.txtBoxReview = new System.Windows.Forms.RichTextBox();
             this.btnRefresh = new System.Windows.Forms.Button();
@@ -65,17 +65,17 @@
             this.tabClosed.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lblReviewerDiplay
+            // lblReviewerDisplay
             // 
-            this.lblReviewerDiplay.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.lblReviewerDiplay.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
-            this.lblReviewerDiplay.ForeColor = System.Drawing.Color.SteelBlue;
-            this.lblReviewerDiplay.Location = new System.Drawing.Point(19, 331);
-            this.lblReviewerDiplay.Name = "lblReviewerDiplay";
-            this.lblReviewerDiplay.Size = new System.Drawing.Size(883, 48);
-            this.lblReviewerDiplay.TabIndex = 20;
-            this.lblReviewerDiplay.Text = "Click on a row in the table to insert a comment.";
-            this.lblReviewerDiplay.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.lblReviewerDisplay.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.lblReviewerDisplay.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.lblReviewerDisplay.ForeColor = System.Drawing.Color.SteelBlue;
+            this.lblReviewerDisplay.Location = new System.Drawing.Point(19, 331);
+            this.lblReviewerDisplay.Name = "lblReviewerDisplay";
+            this.lblReviewerDisplay.Size = new System.Drawing.Size(883, 48);
+            this.lblReviewerDisplay.TabIndex = 20;
+            this.lblReviewerDisplay.Text = "Click on a row in the table to insert a comment.";
+            this.lblReviewerDisplay.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // btnSubmitReview
             // 
@@ -460,7 +460,7 @@
             this.Controls.Add(this.btnSubmitReview);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnRefresh);
-            this.Controls.Add(this.lblReviewerDiplay);
+            this.Controls.Add(this.lblReviewerDisplay);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ReviewTasks";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -482,7 +482,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label lblReviewerDiplay;
+        private System.Windows.Forms.Label lblReviewerDisplay;
         private System.Windows.Forms.Button btnSubmitReview;
         private System.Windows.Forms.RichTextBox txtBoxReview;
         private System.Windows.Forms.Button btnRefresh;

@@ -33,7 +33,7 @@ namespace MRIC_Peer_Review
         private void Initialisation()
         {
             // Default Message and TextBox
-            lblReviewerDiplay.Text = "Click on a row in the table to insert a comment.";
+            lblReviewerDisplay.Text = "Click on a row in the table to insert a comment.";
             txtBoxReview.Text = "";
 
             // Enable DataGrid
@@ -50,7 +50,7 @@ namespace MRIC_Peer_Review
             btnGoToLink.Visible = false;
 
             // Set Label to blue color
-            lblReviewerDiplay.ForeColor = Color.SteelBlue;
+            lblReviewerDisplay.ForeColor = Color.SteelBlue;
 
             // Set Default Cursor
             tabReviews.Cursor = Cursors.IBeam;
@@ -151,15 +151,15 @@ namespace MRIC_Peer_Review
 
                     txtBoxReview.Visible = true;
                     lblRefresh.Visible = true;
-                    lblReviewerDiplay.ForeColor = Color.SteelBlue;
-                    lblReviewerDiplay.Text = "Selected Review:\r"+ dGridAll.Rows[e.RowIndex].Cells["Title"].FormattedValue.ToString();
+                    lblReviewerDisplay.ForeColor = Color.SteelBlue;
+                    lblReviewerDisplay.Text = "Selected Review:\r"+ dGridAll.Rows[e.RowIndex].Cells["Title"].FormattedValue.ToString();
                 }
                 else
                 {
                     txtBoxReview.Visible = false;
                     lblRefresh.Visible = false;
-                    lblReviewerDiplay.ForeColor = Color.Red;
-                    lblReviewerDiplay.Text = "Review is already "+ dGridAll.Rows[e.RowIndex].Cells["Status"].FormattedValue.ToString();
+                    lblReviewerDisplay.ForeColor = Color.Red;
+                    lblReviewerDisplay.Text = "Review is already "+ dGridAll.Rows[e.RowIndex].Cells["Status"].FormattedValue.ToString();
                 }
             }
             else
@@ -192,15 +192,15 @@ namespace MRIC_Peer_Review
 
                     txtBoxReview.Visible = true;
                     lblRefresh.Visible = true;
-                    lblReviewerDiplay.ForeColor = Color.SteelBlue;
-                    lblReviewerDiplay.Text = "Selected Review:\r" + dGridAwaiting.Rows[e.RowIndex].Cells["Title"].FormattedValue.ToString();
+                    lblReviewerDisplay.ForeColor = Color.SteelBlue;
+                    lblReviewerDisplay.Text = "Selected Review:\r" + dGridAwaiting.Rows[e.RowIndex].Cells["Title"].FormattedValue.ToString();
                 }
                 else
                 {
                     txtBoxReview.Visible = false;
                     lblRefresh.Visible = false;
-                    lblReviewerDiplay.ForeColor = Color.Red;
-                    lblReviewerDiplay.Text = "Review is already " + dGridAwaiting.Rows[e.RowIndex].Cells["Status"].FormattedValue.ToString();
+                    lblReviewerDisplay.ForeColor = Color.Red;
+                    lblReviewerDisplay.Text = "Review is already " + dGridAwaiting.Rows[e.RowIndex].Cells["Status"].FormattedValue.ToString();
                 }
             }
             else
@@ -233,15 +233,15 @@ namespace MRIC_Peer_Review
 
                     txtBoxReview.Visible = true;
                     lblRefresh.Visible = true;
-                    lblReviewerDiplay.ForeColor = Color.SteelBlue;
-                    lblReviewerDiplay.Text = "Selected Review:\r" + dGridOpen.Rows[e.RowIndex].Cells["Title"].FormattedValue.ToString();
+                    lblReviewerDisplay.ForeColor = Color.SteelBlue;
+                    lblReviewerDisplay.Text = "Selected Review:\r" + dGridOpen.Rows[e.RowIndex].Cells["Title"].FormattedValue.ToString();
                 }
                 else
                 {
                     txtBoxReview.Visible = false;
                     lblRefresh.Visible = false;
-                    lblReviewerDiplay.ForeColor = Color.Red;
-                    lblReviewerDiplay.Text = "Review is already " + dGridOpen.Rows[e.RowIndex].Cells["Status"].FormattedValue.ToString();
+                    lblReviewerDisplay.ForeColor = Color.Red;
+                    lblReviewerDisplay.Text = "Review is already " + dGridOpen.Rows[e.RowIndex].Cells["Status"].FormattedValue.ToString();
                 }
             }
             else
@@ -276,15 +276,15 @@ namespace MRIC_Peer_Review
 
                     txtBoxReview.Visible = true;
                     lblRefresh.Visible = true;
-                    lblReviewerDiplay.ForeColor = Color.SteelBlue;
-                    lblReviewerDiplay.Text = "Selected Review:\r" + dGridLocked.Rows[e.RowIndex].Cells["Title"].FormattedValue.ToString();
+                    lblReviewerDisplay.ForeColor = Color.SteelBlue;
+                    lblReviewerDisplay.Text = "Selected Review:\r" + dGridLocked.Rows[e.RowIndex].Cells["Title"].FormattedValue.ToString();
                 }
                 else
                 {
                     txtBoxReview.Visible = false;
                     lblRefresh.Visible = false;
-                    lblReviewerDiplay.ForeColor = Color.Red;
-                    lblReviewerDiplay.Text = "Review is already " + dGridLocked.Rows[e.RowIndex].Cells["Status"].FormattedValue.ToString();
+                    lblReviewerDisplay.ForeColor = Color.Red;
+                    lblReviewerDisplay.Text = "Review is already " + dGridLocked.Rows[e.RowIndex].Cells["Status"].FormattedValue.ToString();
                 }
             }
             else
@@ -317,15 +317,15 @@ namespace MRIC_Peer_Review
 
                     txtBoxReview.Visible = true;
                     lblRefresh.Visible = true;
-                    lblReviewerDiplay.ForeColor = Color.SteelBlue;
-                    lblReviewerDiplay.Text = "Selected Review:\r" + dGridClosed.Rows[e.RowIndex].Cells["Title"].FormattedValue.ToString();
+                    lblReviewerDisplay.ForeColor = Color.SteelBlue;
+                    lblReviewerDisplay.Text = "Selected Review:\r" + dGridClosed.Rows[e.RowIndex].Cells["Title"].FormattedValue.ToString();
                 }
                 else
                 {
                     txtBoxReview.Visible = false;
                     lblRefresh.Visible = false;
-                    lblReviewerDiplay.ForeColor = Color.Red;
-                    lblReviewerDiplay.Text = "Review is already " + dGridClosed.Rows[e.RowIndex].Cells["Status"].FormattedValue.ToString();
+                    lblReviewerDisplay.ForeColor = Color.Red;
+                    lblReviewerDisplay.Text = "Review is already " + dGridClosed.Rows[e.RowIndex].Cells["Status"].FormattedValue.ToString();
                 }
             }
             else
@@ -399,5 +399,6 @@ namespace MRIC_Peer_Review
         {
             Process.Start(link);
         }
+
     }
 }

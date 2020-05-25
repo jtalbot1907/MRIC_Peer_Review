@@ -81,7 +81,7 @@ namespace MRIC_Peer_Review.Processes
             return isReviewerNotOverload;
         }
 
-        private DataTable GetListOfReviewersWithSpecialism(string specialism, int minGrade)
+        public DataTable GetListOfReviewersWithSpecialism(string specialism, int minGrade)
         {
             string sqlQuery = "select reviewerId, specialism from reviewerspecialisms " +
                 "where specialism ='" +specialism+ "' and average>= " +minGrade+ " and NOT reviewerId  = " +authorId+ "; ";
@@ -90,5 +90,7 @@ namespace MRIC_Peer_Review.Processes
             //Utilities.DataTableDisplayer.Display(dt);
             return dt;
         }
+
+
     }
 }

@@ -12,7 +12,12 @@ namespace MRIC_Peer_Review
     {
         private Thread thread;
         private int userId;
+        private int reviewerId;
         private string fullName;
+        private DataTable dtSpecialism;
+        DataTable dt = new DataTable();
+        //DataTable dt = new DataTable();
+
         ExtractReviews reviewTaskExtractor;
 
         public Dashboard(int userId)
@@ -25,6 +30,11 @@ namespace MRIC_Peer_Review
         {
             fullName = new LogIn(userId).GetFullName();
             this.lblWelcome.Text = "Welcome,  "+fullName+".";
+
+            dtSpecialism = new LogIn(reviewerId).GetSpecialism();
+            dataGridView1.DataSource = dtSpecialism;
+           
+
         }
 
         private void openLoginForm()

@@ -35,7 +35,7 @@ namespace MRIC_Peer_Review.Forms
 
             // Hide CommentId an Rate
             dGridRateReview.Columns["CommentId"].Visible = false;
-            dGridRateReview.Columns["Rate"].Visible = false;
+            dGridRateReview.Columns["rate"].Visible = false;
 
             // Resize column Width in DataGrid
             dGridRateReview.Columns["Title"].FillWeight = 15;
@@ -48,8 +48,6 @@ namespace MRIC_Peer_Review.Forms
             btnSubmitReview.Visible = false;
             lblReviewerDiplay.Text = "Click on a row to rate a Comment";
             lblReviewerDiplay.ForeColor = Color.Red;
-
-
         }
 
         private void btnSubmitReview_Click(object sender, EventArgs e)

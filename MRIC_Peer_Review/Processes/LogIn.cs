@@ -11,7 +11,11 @@ namespace MRIC_Peer_Review.Processes
     {
         private string username;
         private string encryptedPassword;
+        private string specialism;
+        private int reviewerId;
         private int userId;
+
+
 
         public LogIn(int userId)
         {
@@ -31,13 +35,13 @@ namespace MRIC_Peer_Review.Processes
 
         private Boolean IsUsernameExist()
         {
-            string sqlQuery = "SELECT count(username) FROM  users WHERE username='" + username + "';";
+            string sqlQuery = "SELECT count(username) FROM users WHERE username='" + username + "';";
             return runBooleanQuery(sqlQuery);
         }
 
         private Boolean IsPasswordCorrect()
         {
-            string sqlQuery = "SELECT count(username) FROM  users WHERE password='" + encryptedPassword + "';";
+            string sqlQuery = "SELECT count(username) FROM users WHERE password='" + encryptedPassword + "';";
             return runBooleanQuery(sqlQuery);
         }
 
@@ -50,7 +54,7 @@ namespace MRIC_Peer_Review.Processes
 
         public int GetUserId()
         {
-            string sqlQuery = "SELECT userId FROM  users WHERE username='" + username + "';";
+            string sqlQuery = "SELECT userId FROM users WHERE username='" + username + "';";
             return GetInteger(sqlQuery);
         }
 
@@ -67,7 +71,7 @@ namespace MRIC_Peer_Review.Processes
         {
             string firstName;
             TextInfo myTI = new CultureInfo("en-US", false).TextInfo;
-            string sqlQuery = "SELECT firstname FROM  users WHERE userId=" + userId + ";";
+            string sqlQuery = "SELECT firstname FROM users WHERE userId=" + userId + ";";
             firstName = GetString(sqlQuery);
             return myTI.ToTitleCase(firstName);
         }
@@ -76,7 +80,7 @@ namespace MRIC_Peer_Review.Processes
         {
             string surname;
             TextInfo myTI = new CultureInfo("en-US", false).TextInfo;
-            string sqlQuery = "SELECT surname FROM  users WHERE userId=" + userId + ";";
+            string sqlQuery = "SELECT surname FROM users WHERE userId=" + userId + ";";
             surname = GetString(sqlQuery);
             return myTI.ToTitleCase(surname);
         }
@@ -84,9 +88,17 @@ namespace MRIC_Peer_Review.Processes
         public String GetUsername()
         {
             string username;
-            string sqlQuery = "SELECT username  FROM  users WHERE userId=" + userId + ";";
+            string sqlQuery = "SELECT username FROM users WHERE userId=" + userId + ";";
             username = GetString(sqlQuery);
             return (username);
+        }
+
+        public DataTable GetSpecialism()
+        {
+            DataTable dt;
+            string sqlQuery = "SELECT specialism, average FROM reviewerspecialisms WHERE reviewerId=" + reviewerId + ";";
+            dt = Read(sqlQuery);
+            return dt;
         }
     }
 }

@@ -90,6 +90,5 @@ namespace MRIC_Peer_Review
         {
             this.Close();
         }
-
     }
 }
