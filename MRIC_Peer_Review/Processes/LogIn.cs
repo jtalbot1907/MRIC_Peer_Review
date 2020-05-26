@@ -15,11 +15,9 @@ namespace MRIC_Peer_Review.Processes
         private int reviewerId;
         private int userId;
 
-
-
         public LogIn(int userId)
         {
-            this.userId = userId;
+            this.userId = userId; 
         }
 
         public LogIn(string username, string password)
@@ -95,10 +93,8 @@ namespace MRIC_Peer_Review.Processes
 
         public DataTable GetSpecialism()
         {
-            DataTable dt;
-            string sqlQuery = "SELECT specialism, average FROM reviewerspecialisms WHERE reviewerId=" + reviewerId + ";";
-            dt = Read(sqlQuery);
-            return dt;
+            string sqlQuery = "SELECT specialism, average FROM reviewerspecialisms WHERE reviewerId=" + userId + ";";
+            return Read(sqlQuery);
         }
     }
 }

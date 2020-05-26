@@ -9,7 +9,7 @@ namespace MRIC_Peer_Review.Processes
 {
     class ExtractReviews : DatabaseQuery
     {
-        readonly int reviewerId;
+         int reviewerId;
 
         public ExtractReviews(int reviewerId)
         {
@@ -48,6 +48,13 @@ namespace MRIC_Peer_Review.Processes
         {
             string sqlQuery = "select rv.reviewId, rd.Title, rv.Specialism, rv.Status, rd.link from reviews rv inner join rdocs rd " +
                 "where rv.status ='Closed' and rv.rdocId = rd.rdocId and rv.reviewerId = " + reviewerId + "; ";
+            return Read(sqlQuery);
+        }
+
+        public DataTable GetContributionsCRdocs()
+        {
+            string sqlQuery = "select rv.reviewId, rd.Title, rv.Specialism, rv.Status, rd.link from reviews rv inner join rdocs rd " +
+                "where rv.rdocId = rd.rdocId and rv.reviewerId = " + reviewerId + "; ";
             return Read(sqlQuery);
         }
     }

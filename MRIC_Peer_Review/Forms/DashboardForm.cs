@@ -12,13 +12,13 @@ namespace MRIC_Peer_Review
     {
         private Thread thread;
         private int userId;
-        private int reviewerId;
+        public int reviewerId;
         private string fullName;
-        private DataTable dtSpecialism;
-        DataTable dt = new DataTable();
-        //DataTable dt = new DataTable();
 
-        ExtractReviews reviewTaskExtractor;
+        DatabaseQuery db = new DatabaseQuery();
+        DataTable dt = new DataTable();
+        private LogIn GetSpec;
+
 
         public Dashboard(int userId)
         {
@@ -30,11 +30,15 @@ namespace MRIC_Peer_Review
         {
             fullName = new LogIn(userId).GetFullName();
             this.lblWelcome.Text = "Welcome,  "+fullName+".";
+            
+            // getting specilisation for reviewer
+            GetSpec = new LogIn(userId);
+            DataTable dt = GetSpec.GetSpecialism();
+            dGridSpecialism.DataSource = dt;
+            DataGridViewColumn dtCol= dGridSpecialism.Columns[1];
+            dtCol.FillWeight = 15;
 
-            dtSpecialism = new LogIn(reviewerId).GetSpecialism();
-            dataGridView1.DataSource = dtSpecialism;
-           
-
+            lblSpecialism.Text = fullName+"'s Specialism";
         }
 
         private void openLoginForm()
@@ -115,5 +119,7 @@ namespace MRIC_Peer_Review
         {
             Process.Start("http://www.mric.mu/");
         }
+
+       
     }   
 }

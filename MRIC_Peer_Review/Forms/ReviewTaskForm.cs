@@ -21,13 +21,13 @@ namespace MRIC_Peer_Review
         string link;
         DatabaseQuery db = new DatabaseQuery();
         DataTable dt = new DataTable();
-        private readonly ExtractReviews reviewTaskExtractor;
+        private readonly ExtractReviews reviewExtractor;
 
         public ReviewTasks(int reviewerId)
         {
             InitializeComponent();
             this.reviewerId = reviewerId;
-            reviewTaskExtractor = new ExtractReviews(reviewerId);
+            reviewExtractor = new ExtractReviews(reviewerId);
         }
 
         private void Initialisation()
@@ -56,11 +56,11 @@ namespace MRIC_Peer_Review
             tabReviews.Cursor = Cursors.IBeam;
 
             // Load Data in DataGrid
-            DataTable dtAll = reviewTaskExtractor.GetReviewsAllStatus();
-            DataTable dtAwaiting = reviewTaskExtractor.GetReviewsAwaiting();
-            DataTable dtOpen = reviewTaskExtractor.GetReviewsOpen();
-            DataTable dtLocked = reviewTaskExtractor.GetReviewsLocked();
-            DataTable dtClosed = reviewTaskExtractor.GetReviewsClosed();
+            DataTable dtAll = reviewExtractor.GetReviewsAllStatus();
+            DataTable dtAwaiting = reviewExtractor.GetReviewsAwaiting();
+            DataTable dtOpen = reviewExtractor.GetReviewsOpen();
+            DataTable dtLocked = reviewExtractor.GetReviewsLocked();
+            DataTable dtClosed = reviewExtractor.GetReviewsClosed();
             dGridAll.DataSource = dtAll;
             dGridAwaiting.DataSource = dtAwaiting;
             dGridOpen.DataSource = dtOpen;
@@ -399,6 +399,5 @@ namespace MRIC_Peer_Review
         {
             Process.Start(link);
         }
-
     }
 }
