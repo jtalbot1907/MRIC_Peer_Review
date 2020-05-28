@@ -13,8 +13,14 @@ namespace MRIC_Peer_Review
 {
     public partial class CommentsForm : Form
     {
-     
+        int userId;
+        int reviewerId;
+        int authorId;
+        private ExtractComments GetComments;
+        private ExtractReviews GetReviews;
 
+        DatabaseQuery db = new DatabaseQuery();
+        DataTable dt = new DataTable();
 
         public CommentsForm()
         {
@@ -23,40 +29,26 @@ namespace MRIC_Peer_Review
 
         private void CommentsForm_Load(object sender, EventArgs e)
         {
-           
             LoadComments();
             LoadReview();
         }
 
         private void LoadComments()
         {
-            DatabaseQuery db = new DatabaseQuery();
-            DataTable dt = new DataTable();
-
-           //Extract Data
-            ExtractComments extractComments = new ExtractComments();
-            dGridAllComments.DataSource = extractComments.GetAllComments();
-
-            // TextWrap in DataGrid
-            dGridAllComments.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
-
-            //    // Hide CommentId an Rate
-            //    dGridRateReview.Columns["CommentId"].Visible = false;
-            //    dGridRateReview.Columns["rate"].Visible = false;
-
-            // Resize column Width in DataGrid
-            dGridAllComments.Columns[0].FillWeight = 15;
-            dGridAllComments.Columns[1].FillWeight = 60;
-            dGridAllComments.Columns[2].FillWeight = 10;
-            dGridAllComments.Columns[3].FillWeight = 60;
-            dGridAllComments.Columns[4].FillWeight = 8;
-
+            GetComments = new ExtractComments();
+            DataTable dt = GetComments.GetAllComments();
+            dGridAllComments.DataSource = dt;
         }
 
         private void LoadReview()
         {
-
+            GetReviews = new ExtractReviews(reviewerId);
+            DataTable dt = GetReviews.GetAllRdocs();
+            dGridAllReviews.DataSource = dt;
         }
+
+     
+       
 
     }
 }

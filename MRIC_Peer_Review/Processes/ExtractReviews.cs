@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Data;
 using System.Globalization;
-
 using System.Linq;
 using System.Text;
 
@@ -10,6 +9,7 @@ namespace MRIC_Peer_Review.Processes
     class ExtractReviews : DatabaseQuery
     {
          int reviewerId;
+
 
         public ExtractReviews(int reviewerId)
         {
@@ -51,7 +51,7 @@ namespace MRIC_Peer_Review.Processes
             return Read(sqlQuery);
         }
 
-        public DataTable GetContributionsCRdocs()
+        public DataTable GetAllRdocs()
         {
             string sqlQuery = "select rv.reviewId, rd.Title, rv.Specialism, rv.Status, rd.link from reviews rv inner join rdocs rd " +
                 "where rv.rdocId = rd.rdocId and rv.reviewerId = " + reviewerId + "; ";

@@ -324,7 +324,7 @@
             this.dGridSpecialism.DefaultCellStyle = dataGridViewCellStyle2;
             this.dGridSpecialism.Enabled = false;
             this.dGridSpecialism.GridColor = System.Drawing.Color.White;
-            this.dGridSpecialism.Location = new System.Drawing.Point(946, 150);
+            this.dGridSpecialism.Location = new System.Drawing.Point(921, 142);
             this.dGridSpecialism.Name = "dGridSpecialism";
             this.dGridSpecialism.ReadOnly = true;
             this.dGridSpecialism.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -366,7 +366,7 @@
             this.lblSpecialism.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lblSpecialism.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSpecialism.ForeColor = System.Drawing.Color.SteelBlue;
-            this.lblSpecialism.Location = new System.Drawing.Point(652, 81);
+            this.lblSpecialism.Location = new System.Drawing.Point(652, 82);
             this.lblSpecialism.Name = "lblSpecialism";
             this.lblSpecialism.Size = new System.Drawing.Size(575, 48);
             this.lblSpecialism.TabIndex = 31;
