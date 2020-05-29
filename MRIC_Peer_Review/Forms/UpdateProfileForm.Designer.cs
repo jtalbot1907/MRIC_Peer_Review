@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpdateProfileForm));
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
@@ -43,10 +44,10 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dGridSpecialism = new System.Windows.Forms.DataGridView();
+            this.lblSpecLost = new System.Windows.Forms.Label();
+            this.lblAttention = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGridSpecialism)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,12 +57,13 @@
             this.btnUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUpdate.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(143, 375);
+            this.btnUpdate.Location = new System.Drawing.Point(148, 367);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(77, 35);
             this.btnUpdate.TabIndex = 7;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnCancel
             // 
@@ -69,7 +71,7 @@
             this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(19, 387);
+            this.btnCancel.Location = new System.Drawing.Point(12, 379);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(85, 35);
             this.btnCancel.TabIndex = 21;
@@ -82,7 +84,7 @@
             this.chkListSpecialisms.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkListSpecialisms.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkListSpecialisms.FormattingEnabled = true;
-            this.chkListSpecialisms.Location = new System.Drawing.Point(25, 232);
+            this.chkListSpecialisms.Location = new System.Drawing.Point(30, 224);
             this.chkListSpecialisms.Name = "chkListSpecialisms";
             this.chkListSpecialisms.Size = new System.Drawing.Size(195, 132);
             this.chkListSpecialisms.TabIndex = 5;
@@ -102,19 +104,19 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.SteelBlue;
-            this.groupBox1.Location = new System.Drawing.Point(237, 15);
+            this.groupBox1.Location = new System.Drawing.Point(273, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(234, 411);
+            this.groupBox1.Size = new System.Drawing.Size(249, 411);
             this.groupBox1.TabIndex = 23;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Registration";
+            this.groupBox1.Text = "Update Profile";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label3.Location = new System.Drawing.Point(5, 211);
+            this.label3.Location = new System.Drawing.Point(10, 203);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(92, 16);
             this.label3.TabIndex = 37;
@@ -125,7 +127,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label4.Location = new System.Drawing.Point(5, 28);
+            this.label4.Location = new System.Drawing.Point(10, 20);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 16);
             this.label4.TabIndex = 36;
@@ -134,7 +136,7 @@
             // txtFirstname
             // 
             this.txtFirstname.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.txtFirstname.Location = new System.Drawing.Point(25, 47);
+            this.txtFirstname.Location = new System.Drawing.Point(30, 39);
             this.txtFirstname.Name = "txtFirstname";
             this.txtFirstname.Size = new System.Drawing.Size(195, 22);
             this.txtFirstname.TabIndex = 1;
@@ -144,7 +146,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label1.Location = new System.Drawing.Point(5, 72);
+            this.label1.Location = new System.Drawing.Point(10, 64);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 16);
             this.label1.TabIndex = 29;
@@ -155,7 +157,7 @@
             this.lblPassword1.AutoSize = true;
             this.lblPassword1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPassword1.ForeColor = System.Drawing.Color.SteelBlue;
-            this.lblPassword1.Location = new System.Drawing.Point(5, 160);
+            this.lblPassword1.Location = new System.Drawing.Point(10, 152);
             this.lblPassword1.Name = "lblPassword1";
             this.lblPassword1.Size = new System.Drawing.Size(77, 16);
             this.lblPassword1.TabIndex = 27;
@@ -164,7 +166,7 @@
             // txtSurname
             // 
             this.txtSurname.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.txtSurname.Location = new System.Drawing.Point(25, 91);
+            this.txtSurname.Location = new System.Drawing.Point(30, 83);
             this.txtSurname.Name = "txtSurname";
             this.txtSurname.Size = new System.Drawing.Size(195, 22);
             this.txtSurname.TabIndex = 2;
@@ -172,7 +174,7 @@
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.txtPassword.Location = new System.Drawing.Point(25, 179);
+            this.txtPassword.Location = new System.Drawing.Point(30, 171);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(195, 22);
             this.txtPassword.TabIndex = 4;
@@ -181,7 +183,7 @@
             // txtUsername
             // 
             this.txtUsername.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.txtUsername.Location = new System.Drawing.Point(25, 135);
+            this.txtUsername.Location = new System.Drawing.Point(30, 127);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(195, 22);
             this.txtUsername.TabIndex = 3;
@@ -191,22 +193,11 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label2.Location = new System.Drawing.Point(5, 116);
+            this.label2.Location = new System.Drawing.Point(10, 108);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(80, 16);
             this.label2.TabIndex = 32;
             this.label2.Text = "Username :";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Image = global::MRIC_Peer_Review.Properties.Resources.MRIC;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 80);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(225, 225);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 22;
-            this.pictureBox1.TabStop = false;
             // 
             // dGridSpecialism
             // 
@@ -218,12 +209,12 @@
             this.dGridSpecialism.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dGridSpecialism.BackgroundColor = System.Drawing.Color.White;
             this.dGridSpecialism.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dGridSpecialism.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
-            this.dGridSpecialism.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            this.dGridSpecialism.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dGridSpecialism.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dGridSpecialism.ColumnHeadersVisible = false;
             this.dGridSpecialism.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.dGridSpecialism.GridColor = System.Drawing.Color.White;
-            this.dGridSpecialism.Location = new System.Drawing.Point(477, 15);
+            this.dGridSpecialism.GridColor = System.Drawing.Color.Red;
+            this.dGridSpecialism.Location = new System.Drawing.Point(30, 212);
             this.dGridSpecialism.Name = "dGridSpecialism";
             this.dGridSpecialism.ReadOnly = true;
             this.dGridSpecialism.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -237,32 +228,65 @@
             this.dGridSpecialism.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dGridSpecialism.RowHeadersVisible = false;
             this.dGridSpecialism.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Red;
+            this.dGridSpecialism.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dGridSpecialism.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dGridSpecialism.ShowCellErrors = false;
             this.dGridSpecialism.ShowCellToolTips = false;
             this.dGridSpecialism.ShowEditingIcon = false;
             this.dGridSpecialism.ShowRowErrors = false;
-            this.dGridSpecialism.Size = new System.Drawing.Size(265, 423);
+            this.dGridSpecialism.Size = new System.Drawing.Size(211, 165);
             this.dGridSpecialism.TabIndex = 38;
+            // 
+            // lblSpecLost
+            // 
+            this.lblSpecLost.AutoSize = true;
+            this.lblSpecLost.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSpecLost.ForeColor = System.Drawing.Color.Red;
+            this.lblSpecLost.Location = new System.Drawing.Point(42, 110);
+            this.lblSpecLost.Name = "lblSpecLost";
+            this.lblSpecLost.Size = new System.Drawing.Size(186, 68);
+            this.lblSpecLost.TabIndex = 39;
+            this.lblSpecLost.Text = "Your Specialism with \r\nits average value displayed \r\nbelow may be disarded if \r\ny" +
+    "ou update your profile";
+            this.lblSpecLost.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblAttention
+            // 
+            this.lblAttention.AutoSize = true;
+            this.lblAttention.Font = new System.Drawing.Font("Arial", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAttention.ForeColor = System.Drawing.Color.Red;
+            this.lblAttention.Location = new System.Drawing.Point(76, 49);
+            this.lblAttention.Name = "lblAttention";
+            this.lblAttention.Size = new System.Drawing.Size(119, 29);
+            this.lblAttention.TabIndex = 40;
+            this.lblAttention.Text = "Attention";
+            this.lblAttention.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // UpdateProfileForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(754, 450);
-            this.Controls.Add(this.dGridSpecialism);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(531, 431);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.lblSpecLost);
+            this.Controls.Add(this.lblAttention);
+            this.Controls.Add(this.dGridSpecialism);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "UpdateProfileForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Update Profile";
             this.Load += new System.EventHandler(this.UpdateProfile_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGridSpecialism)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -281,7 +305,8 @@
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridView dGridSpecialism;
+        private System.Windows.Forms.Label lblSpecLost;
+        private System.Windows.Forms.Label lblAttention;
     }
 }

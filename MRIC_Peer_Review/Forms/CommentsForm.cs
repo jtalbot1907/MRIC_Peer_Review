@@ -1,4 +1,4 @@
-﻿using MRIC_Peer_Review.Processes;
+﻿
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MRIC_Peer_Review.Processes;
 
 namespace MRIC_Peer_Review
 {
@@ -16,8 +17,8 @@ namespace MRIC_Peer_Review
         int userId;
         int reviewerId;
         int authorId;
-        private ExtractComments GetComments;
-        private ExtractReviews GetReviews;
+        private ExtractComments GetAllComments;
+        private ExtractReviews GetAllRdocs;
 
         DatabaseQuery db = new DatabaseQuery();
         DataTable dt = new DataTable();
@@ -35,20 +36,16 @@ namespace MRIC_Peer_Review
 
         private void LoadComments()
         {
-            GetComments = new ExtractComments();
-            DataTable dt = GetComments.GetAllComments();
+            GetAllComments = new ExtractComments();
+            DataTable dt = GetAllComments.GetAllComments();
             dGridAllComments.DataSource = dt;
         }
 
         private void LoadReview()
         {
-            GetReviews = new ExtractReviews(reviewerId);
-            DataTable dt = GetReviews.GetAllRdocs();
+            GetAllRdocs = new ExtractReviews(reviewerId);
+            DataTable dt = GetAllRdocs.GetAllRdocs();
             dGridAllReviews.DataSource = dt;
         }
-
-     
-       
-
     }
 }
